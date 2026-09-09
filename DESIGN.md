@@ -13,7 +13,7 @@ Reviewed the public HTML, content, asset references and styling from https://gur
 ### Improve
 - Homepage labels such as “Case study insight.” and “Technical project.” obscure project names. Lead with names and a concrete problem or engineering purpose.
 - The site declares earth-green palette tokens and Inter typography. Replace this visual vocabulary with cream paper, restrained pastel window chrome and editorial serif headings, matching the new brief.
-- Add a memorable personal composition: portrait polaroid, handwritten annotation, original SVG cat, desktop-window project framing.
+- Add a memorable personal composition: portrait polaroid, original SVG cat, desktop-window project framing. Generic sticky-note copy was removed following owner feedback.
 - Surface the strongest research evidence on the homepage instead of requiring a case-study click first.
 - Project images in the retrieved source lack descriptive alt text. Supply meaningful descriptions.
 - Existing footer email addresses appear as plain text. Make the primary contact a mailto link.
@@ -47,7 +47,7 @@ Accessibility: semantic headings, visible focus, skip link, descriptive image al
 
 ## Recruiting content and evidence
 
-Husky Bites is a team course prototype, not a shipped product. Research counts and flow findings come from the existing case study. No conversion or user-impact metrics are invented. The homepage credits team work. Detailed project links currently open the original portfolio; full case-study migration is a later iteration.
+Husky Bites is a team course prototype, not a shipped product. Research counts and flow findings come from the existing case study. No conversion or user-impact metrics are invented. The homepage credits team work. Project stories and About now live inside this portfolio. SWE includes the full seven-image collection from the original site.
 
 Before a public recruiting launch, confirm current student/status copy, résumé freshness, specific individual responsibilities in Husky Bites, and add Mini-Git repository/test evidence where shareable. Preserve project collaborators and avoid presenting team outcomes as individual delivery.
 

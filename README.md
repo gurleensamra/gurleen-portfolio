@@ -17,7 +17,7 @@ Open the Local address printed by the server. `npm run build` produces the Sites
 - Browser-local theme preference, cat interaction, focus states, responsive layouts, motion preferences.
 - Real portrait/project art from the existing portfolio; original SVG accents.
 
-Project detail links go to the original portfolio. No case-study migration or existing-domain replacement is included. No analytics, contact backend, generated imagery, or music playback is included.
+Project details and About are now native routes in this portfolio. The existing domain is not replaced. No analytics, contact backend, generated imagery, or music playback is included.
 
 ## Validation
 - Production build passed before final source formatting; final rebuild performed after corrections.

@@ -1,10 +1,11 @@
 'use client';
+import Link from 'next/link';
 import { useState, useSyncExternalStore } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 const resume =
   'https://drive.google.com/file/d/1BTmVJU_RXWrYaxeRcfbER-kkpEeJd01M/view?usp=sharing';
-const base = 'https://gurleenksamra.com/projects/';
+const base = '/projects/';
 function Cat({ sleeping = false }: { sleeping?: boolean }) {
   return (
     <svg viewBox="0 0 180 150" fill="none" aria-hidden="true">
@@ -73,19 +74,19 @@ export default function Home() {
   };
   return (
     <div className={`portfolio ${night ? 'night' : ''}`}>
-      <a className="skip" href="#work">
+      <Link className="skip" href="#work">
         Skip to projects
-      </a>
+      </Link>
       <header className="nav">
-        <a className="brand" href="#home" aria-label="Gurleen Samra home">
+        <Link className="brand" href="#home" aria-label="Gurleen Samra home">
           gks<span>✳</span>
-        </a>
+        </Link>
         <nav aria-label="Main navigation">
-          <a href="#work">My work</a>
-          <a href="#about">A little about me</a>
-          <a href={resume} target="_blank" rel="noreferrer">
+          <Link href="#work">My work</Link>
+          <Link href="/about">A little about me</Link>
+          <Link href={resume} target="_blank" rel="noreferrer">
             Résumé ↗
-          </a>
+          </Link>
         </nav>
         <Button
           className="theme-toggle"
@@ -128,9 +129,9 @@ export default function Home() {
               <br className="desktop-break" /> that feel intuitive, useful, and
               a little more human.
             </p>
-            <a href="#work" className="cta">
+            <Link href="#work" className="cta">
               Explore my work <span>↓</span>
-            </a>
+            </Link>
             <span className="hand hero-note">
               a few things I’ve made with care ↴
             </span>
@@ -168,10 +169,6 @@ export default function Home() {
                 <span>✿</span> building at the intersection of people &
                 technology
               </div>
-            </div>
-            <div className="sticky hand">
-              A little logic.
-              <br />A little magic.<span>♡</span>
             </div>
             <div className="cat-sticker">
               <Button
@@ -211,7 +208,7 @@ export default function Home() {
           <article className="featured project-window">
             <Chrome title="01 / husky-bites.fig" />
             <div className="featured-content">
-              <a
+              <Link
                 className="project-image dining"
                 href={`${base}uw-dining-app-ux-case-study`}
               >
@@ -225,7 +222,7 @@ export default function Home() {
                 <span className="image-note hand">
                   good food, student budget
                 </span>
-              </a>
+              </Link>
               <div className="project-copy">
                 <div className="tags">
                   <span>UX RESEARCH</span>
@@ -257,12 +254,12 @@ export default function Home() {
                     </dd>
                   </div>
                 </dl>
-                <a
+                <Link
                   className="text-link"
                   href={`${base}uw-dining-app-ux-case-study`}
                 >
                   Read the case study <span>↗</span>
-                </a>
+                </Link>
                 <p className="project-meta">
                   Team course project · Figma · Research & prototyping
                 </p>
@@ -272,7 +269,7 @@ export default function Home() {
           <div className="project-pair">
             <article className="project-window">
               <Chrome title="02 / mini-git.java" />
-              <a
+              <Link
                 className="project-image git"
                 href={`${base}technical-project-mini-git`}
               >
@@ -284,7 +281,7 @@ export default function Home() {
                   height="1245"
                   loading="lazy"
                 />
-              </a>
+              </Link>
               <div className="small-project-copy">
                 <span className="eyebrow">SOFTWARE ENGINEERING · JAVA</span>
                 <h3>Mini-Git</h3>
@@ -292,17 +289,17 @@ export default function Home() {
                   Understanding version control by building it: a simplified
                   system exploring commits, branches, and repositories.
                 </p>
-                <a
+                <Link
                   className="text-link"
                   href={`${base}technical-project-mini-git`}
                 >
                   Explore the implementation <span>↗</span>
-                </a>
+                </Link>
               </div>
             </article>
             <article className="project-window">
               <Chrome title="03 / swe-visuals.design" />
-              <a
+              <Link
                 className="project-image swe"
                 href={`${base}swe-graphics-posters-branding`}
               >
@@ -314,7 +311,7 @@ export default function Home() {
                   height="2690"
                   loading="lazy"
                 />
-              </a>
+              </Link>
               <div className="small-project-copy">
                 <span className="eyebrow">VISUAL DESIGN · COMMUNITY</span>
                 <h3>Designing for connection</h3>
@@ -322,27 +319,28 @@ export default function Home() {
                   Branding, event assets, and social graphics for the Society of
                   Women Engineers at UW. Making community feel inviting.
                 </p>
-                <a
+                <Link
                   className="text-link"
                   href={`${base}swe-graphics-posters-branding`}
                 >
                   See the visual work <span>↗</span>
-                </a>
+                </Link>
               </div>
             </article>
           </div>
         </section>
         <section id="about" className="about-section">
-          <div className="about-note">
-            <span className="tape" aria-hidden="true" />
-            <p className="hand">Things I come back to:</p>
-            <ul>
-              <li>thoughtful little details</li>
-              <li>making complex things feel simple</li>
-              <li>a blank page & a good idea</li>
-            </ul>
-            <span className="hand signature">— Gurleen ♡</span>
-          </div>
+          <figure className="about-note">
+            <Image
+              unoptimized
+              src="/images/gurleen.jpg"
+              alt="Gurleen"
+              width={1984}
+              height={2087}
+              style={{ width: '100%', height: '280px', objectFit: 'cover' }}
+            />
+            <figcaption className="hand">Gurleen Kaur Samra</figcaption>
+          </figure>
           <div className="about-copy">
             <p className="eyebrow">THE PERSON BEHIND THE PIXELS</p>
             <h2>
@@ -360,9 +358,9 @@ export default function Home() {
               complex problems into thoughtful, accessible experiences. Outside
               the interface, I experiment with digital art and watercolors.
             </p>
-            <a href="https://gurleenksamra.com/about" className="text-link">
+            <Link href="/about" className="text-link">
               A little more about me ↗
-            </a>
+            </Link>
           </div>
         </section>
         <footer id="contact">
@@ -372,22 +370,22 @@ export default function Home() {
             <br />
             <em>thoughtful.</em> <span aria-hidden="true">✳</span>
           </h2>
-          <a className="cta" href="mailto:gurleenksamra@gmail.com">
+          <Link className="cta" href="mailto:gurleenksamra@gmail.com">
             Say hello <span>↗</span>
-          </a>
+          </Link>
           <div className="footer-bottom">
             <span>© {new Date().getFullYear()} Gurleen Kaur Samra</span>
             <span>Made with code, care & curiosity.</span>
-            <a
+            <Link
               href="https://www.linkedin.com/in/gurleen-kaur-samra"
               target="_blank"
               rel="noreferrer"
             >
               LinkedIn ↗
-            </a>
-            <a href={resume} target="_blank" rel="noreferrer">
+            </Link>
+            <Link href={resume} target="_blank" rel="noreferrer">
               Résumé ↗
-            </a>
+            </Link>
           </div>
         </footer>
       </main>
