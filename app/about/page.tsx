@@ -1,13 +1,14 @@
-import Link from 'next/link';
+/* Native anchors intentionally avoid the deployed vinext Link navigation failure. */
+/* oxlint-disable next/no-html-link-for-pages */
 import Image from 'next/image';
 import PortfolioFrame from '@/components/portfolio-frame';
 export const metadata = { title: 'About Gurleen — Software, Design & Art' };
 export default function About() {
   return (
     <PortfolioFrame>
-      <Link href="/" className="text-link">
+      <a href="/" className="text-link">
         ← Back home
-      </Link>
+      </a>
       <header className="story-heading">
         <p className="eyebrow">ABOUT ME</p>
         <h1>Gurleen Kaur Samra</h1>
@@ -48,9 +49,9 @@ export default function About() {
             another way for me to explore an idea, from a blank page to
             something someone else can connect with.
           </p>
-          <Link className="cta" href="mailto:gurleenksamra@gmail.com">
+          <a className="cta" href="mailto:gurleenksamra@gmail.com">
             Let’s talk ↗
-          </Link>
+          </a>
         </div>
       </section>
     </PortfolioFrame>

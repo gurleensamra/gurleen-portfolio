@@ -1,4 +1,5 @@
-import Link from 'next/link';
+/* Native anchors intentionally avoid the deployed vinext Link navigation failure. */
+/* oxlint-disable next/no-html-link-for-pages */
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import PortfolioFrame from '@/components/portfolio-frame';
@@ -20,9 +21,9 @@ export default async function Project({ params }: Props) {
   const next = keys[(keys.indexOf(slug) + 1) % keys.length];
   return (
     <PortfolioFrame>
-      <Link className="text-link" href="/#work">
+      <a className="text-link" href="/#work">
         ← Back to selected work
-      </Link>
+      </a>
       <header className="story-heading">
         <p className="eyebrow">{p.category}</p>
         <h1>{p.title}</h1>
@@ -59,9 +60,9 @@ export default async function Project({ params }: Props) {
         <aside className="story-index">
           <p className="eyebrow">IN THIS NOTEBOOK</p>
           {p.sections.map((s, i) => (
-            <Link key={s.title} href={`#part-${i}`}>
+            <a key={s.title} href={`#part-${i}`}>
               {String(i + 1).padStart(2, '0')} / {s.title}
-            </Link>
+            </a>
           ))}
         </aside>
         <article className="story-body">
@@ -106,10 +107,10 @@ export default async function Project({ params }: Props) {
           ))}
         </section>
       )}
-      <Link className="next-project project-window" href={`/projects/${next}`}>
+      <a className="next-project project-window" href={`/projects/${next}`}>
         <span className="eyebrow">NEXT PROJECT →</span>
         <h2>{projects[next as keyof typeof projects].title}</h2>
-      </Link>
+      </a>
     </PortfolioFrame>
   );
 }

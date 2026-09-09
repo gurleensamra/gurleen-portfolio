@@ -1,5 +1,6 @@
+/* Native anchors intentionally avoid the deployed vinext Link navigation failure. */
+/* oxlint-disable next/no-html-link-for-pages */
 'use client';
-import Link from 'next/link';
 import { useState, useSyncExternalStore } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -74,19 +75,19 @@ export default function Home() {
   };
   return (
     <div className={`portfolio ${night ? 'night' : ''}`}>
-      <Link className="skip" href="#work">
+      <a className="skip" href="#work">
         Skip to projects
-      </Link>
+      </a>
       <header className="nav">
-        <Link className="brand" href="#home" aria-label="Gurleen Samra home">
+        <a className="brand" href="#home" aria-label="Gurleen Samra home">
           gks<span>✳</span>
-        </Link>
+        </a>
         <nav aria-label="Main navigation">
-          <Link href="#work">My work</Link>
-          <Link href="/about">A little about me</Link>
-          <Link href={resume} target="_blank" rel="noreferrer">
+          <a href="#work">My work</a>
+          <a href="/about">A little about me</a>
+          <a href={resume} target="_blank" rel="noreferrer">
             Résumé ↗
-          </Link>
+          </a>
         </nav>
         <Button
           className="theme-toggle"
@@ -129,9 +130,9 @@ export default function Home() {
               <br className="desktop-break" /> that feel intuitive, useful, and
               a little more human.
             </p>
-            <Link href="#work" className="cta">
+            <a href="#work" className="cta">
               Explore my work <span>↓</span>
-            </Link>
+            </a>
             <span className="hand hero-note">
               a few things I’ve made with care ↴
             </span>
@@ -208,7 +209,7 @@ export default function Home() {
           <article className="featured project-window">
             <Chrome title="01 / husky-bites.fig" />
             <div className="featured-content">
-              <Link
+              <a
                 className="project-image dining"
                 href={`${base}uw-dining-app-ux-case-study`}
               >
@@ -222,7 +223,7 @@ export default function Home() {
                 <span className="image-note hand">
                   good food, student budget
                 </span>
-              </Link>
+              </a>
               <div className="project-copy">
                 <div className="tags">
                   <span>UX RESEARCH</span>
@@ -254,12 +255,12 @@ export default function Home() {
                     </dd>
                   </div>
                 </dl>
-                <Link
+                <a
                   className="text-link"
                   href={`${base}uw-dining-app-ux-case-study`}
                 >
                   Read the case study <span>↗</span>
-                </Link>
+                </a>
                 <p className="project-meta">
                   Team course project · Figma · Research & prototyping
                 </p>
@@ -269,7 +270,7 @@ export default function Home() {
           <div className="project-pair">
             <article className="project-window">
               <Chrome title="02 / mini-git.java" />
-              <Link
+              <a
                 className="project-image git"
                 href={`${base}technical-project-mini-git`}
               >
@@ -281,7 +282,7 @@ export default function Home() {
                   height="1245"
                   loading="lazy"
                 />
-              </Link>
+              </a>
               <div className="small-project-copy">
                 <span className="eyebrow">SOFTWARE ENGINEERING · JAVA</span>
                 <h3>Mini-Git</h3>
@@ -289,17 +290,17 @@ export default function Home() {
                   Understanding version control by building it: a simplified
                   system exploring commits, branches, and repositories.
                 </p>
-                <Link
+                <a
                   className="text-link"
                   href={`${base}technical-project-mini-git`}
                 >
                   Explore the implementation <span>↗</span>
-                </Link>
+                </a>
               </div>
             </article>
             <article className="project-window">
               <Chrome title="03 / swe-visuals.design" />
-              <Link
+              <a
                 className="project-image swe"
                 href={`${base}swe-graphics-posters-branding`}
               >
@@ -311,7 +312,7 @@ export default function Home() {
                   height="2690"
                   loading="lazy"
                 />
-              </Link>
+              </a>
               <div className="small-project-copy">
                 <span className="eyebrow">VISUAL DESIGN · COMMUNITY</span>
                 <h3>Designing for connection</h3>
@@ -319,12 +320,12 @@ export default function Home() {
                   Branding, event assets, and social graphics for the Society of
                   Women Engineers at UW. Making community feel inviting.
                 </p>
-                <Link
+                <a
                   className="text-link"
                   href={`${base}swe-graphics-posters-branding`}
                 >
                   See the visual work <span>↗</span>
-                </Link>
+                </a>
               </div>
             </article>
           </div>
@@ -358,9 +359,9 @@ export default function Home() {
               complex problems into thoughtful, accessible experiences. Outside
               the interface, I experiment with digital art and watercolors.
             </p>
-            <Link href="/about" className="text-link">
+            <a href="/about" className="text-link">
               A little more about me ↗
-            </Link>
+            </a>
           </div>
         </section>
         <footer id="contact">
@@ -370,22 +371,22 @@ export default function Home() {
             <br />
             <em>thoughtful.</em> <span aria-hidden="true">✳</span>
           </h2>
-          <Link className="cta" href="mailto:gurleenksamra@gmail.com">
+          <a className="cta" href="mailto:gurleenksamra@gmail.com">
             Say hello <span>↗</span>
-          </Link>
+          </a>
           <div className="footer-bottom">
             <span>© {new Date().getFullYear()} Gurleen Kaur Samra</span>
             <span>Made with code, care & curiosity.</span>
-            <Link
+            <a
               href="https://www.linkedin.com/in/gurleen-kaur-samra"
               target="_blank"
               rel="noreferrer"
             >
               LinkedIn ↗
-            </Link>
-            <Link href={resume} target="_blank" rel="noreferrer">
+            </a>
+            <a href={resume} target="_blank" rel="noreferrer">
               Résumé ↗
-            </Link>
+            </a>
           </div>
         </footer>
       </main>

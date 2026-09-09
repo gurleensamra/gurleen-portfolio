@@ -1,5 +1,6 @@
+/* Native anchors intentionally avoid the deployed vinext Link navigation failure. */
+/* oxlint-disable next/no-html-link-for-pages */
 'use client';
-import Link from 'next/link';
 import { useSyncExternalStore } from 'react';
 import { Button } from '@/components/ui/button';
 const resume =
@@ -35,19 +36,19 @@ export default function PortfolioFrame({
   }
   return (
     <div className={`portfolio ${night ? 'night' : ''}`}>
-      <Link className="skip" href="#content">
+      <a className="skip" href="#content">
         Skip to content
-      </Link>
+      </a>
       <header className="nav">
-        <Link className="brand" href="/" aria-label="Gurleen Samra home">
+        <a className="brand" href="/" aria-label="Gurleen Samra home">
           gks<span>✳</span>
-        </Link>
+        </a>
         <nav aria-label="Main navigation">
-          <Link href="/#work">My work</Link>
-          <Link href="/about">A little about me</Link>
-          <Link href={resume} target="_blank" rel="noreferrer">
+          <a href="/#work">My work</a>
+          <a href="/about">A little about me</a>
+          <a href={resume} target="_blank" rel="noreferrer">
             Résumé ↗
-          </Link>
+          </a>
         </nav>
         <Button
           className="theme-toggle"
@@ -62,18 +63,18 @@ export default function PortfolioFrame({
       <main id="content">
         {children}
         <footer className="detail-footer">
-          <Link className="text-link" href="/#work">
+          <a className="text-link" href="/#work">
             ← All projects
-          </Link>
-          <Link className="text-link" href="mailto:gurleenksamra@gmail.com">
+          </a>
+          <a className="text-link" href="mailto:gurleenksamra@gmail.com">
             Say hello ↗
-          </Link>
-          <Link
+          </a>
+          <a
             className="text-link"
             href="https://www.linkedin.com/in/gurleen-kaur-samra"
           >
             LinkedIn ↗
-          </Link>
+          </a>
         </footer>
       </main>
     </div>
