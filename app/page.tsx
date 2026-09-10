@@ -51,12 +51,12 @@ function Chrome({ title }: { title: string }) {
 }
 function FlowerSticker({ className }: { className: string }) {
   const crop = className.includes('sticker-heart') ? '315 262 198 160'
-    : className.includes('flower-hero') ? '690 0 462 490'
-    : className.includes('flower-work') ? '12 20 320 360'
+    : className.includes('flower-hero') ? '698 0 450 456'
+    : className.includes('flower-work') ? '12 20 306 360'
     : '20 416 485 330';
   return (
     <svg className={`scrapbook-sticker ${className}`} viewBox={crop} aria-hidden="true" focusable="false">
-      <image href={sitePath('/images/scrapbook-stickers.png')} width="1152" height="2048" />
+      <image filter="url(#paper-cutout)" href={sitePath('/images/scrapbook-stickers.png')} width="1152" height="2048" />
     </svg>
   );
 }
@@ -116,17 +116,35 @@ export default function Home() {
         </Button>
       </header>
       <main id="home">
+        <svg width="0" height="0" aria-hidden="true" style={{ position: 'absolute' }}>
+          <defs>
+            <filter id="paper-cutout" colorInterpolationFilters="sRGB">
+              <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -10 -10 -10 0 29" />
+            </filter>
+          </defs>
+        </svg>
         <section className="scrapbook-cover" aria-label="Gurleen — welcome to my scrapbook">
           <FlowerSticker className="cover-butterfly flower-hero" />
           <FlowerSticker className="cover-flower flower-work" />
           <FlowerSticker className="cover-heart sticker-heart" />
+          <div className="cover-composition">
           <h1 className="bubble-name" aria-label="Gurleen">
             {['140 258 137 151', '27 738 125 148', '288 578 120 143', '166 414 101 146', '532 111 115 139', '532 111 115 139', '409 426 128 135'].map((crop, index) => (
               <svg key={index} viewBox={crop} aria-hidden="true" focusable="false">
-                <image href={sitePath('/images/pink-bubble-alphabet.png')} width="675" height="1200" />
+                <image filter="url(#paper-cutout)" href={sitePath('/images/pink-bubble-alphabet.png')} width="675" height="1200" />
               </svg>
             ))}
           </h1>
+          <figure className="camera-portrait cover-camera">
+            <svg viewBox="738 978 383 217" aria-labelledby="camera-portrait-title">
+              <title id="camera-portrait-title">Gurleen’s portrait in a pink digital camera</title>
+              <image href={sitePath('/images/camera-frames.png')} width="1152" height="2048" />
+              <rect x="780" y="1010" width="232" height="168" fill="#302a30" />
+              <image href={sitePath('/images/gurleen-2026.jpeg')} x="780" y="1010" width="232" height="168" preserveAspectRatio="xMidYMid meet" />
+            </svg>
+            <figcaption className="hand">hi, that’s me! ♡</figcaption>
+          </figure>
+          </div>
           <p className="hand cover-caption">a little collection of things I make & love</p>
           <SiteLink className="cover-scroll hand" href="#meet-gurleen">come on in ↓</SiteLink>
         </section>
@@ -173,15 +191,6 @@ export default function Home() {
             <div className="profile-window">
               <Chrome title="a little introduction.txt" />
               <div className="profile-inner">
-                <figure className="camera-portrait">
-                  <svg viewBox="738 978 383 217" aria-labelledby="camera-portrait-title">
-                    <title id="camera-portrait-title">Gurleen’s portrait in a pink digital camera</title>
-                    <image href={sitePath('/images/camera-frames.png')} width="1152" height="2048" />
-                    <rect x="780" y="1010" width="232" height="168" fill="#302a30" />
-                    <image href={sitePath('/images/gurleen-2026.jpeg')} x="780" y="1010" width="232" height="168" preserveAspectRatio="xMidYMid meet" />
-                  </svg>
-                  <figcaption className="hand">hi, that’s me! ♡</figcaption>
-                </figure>
                 <div className="mini-bio">
                   <span className="tiny-label">BASED IN CURIOSITY</span>
                   <p>

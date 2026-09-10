@@ -191,7 +191,17 @@ main {
 .scrapbook-cover .cover-butterfly { width: clamp(95px, 15vw, 175px); right: 3%; top: 4%; transform: rotate(12deg); }
 .scrapbook-cover .cover-flower { width: clamp(90px, 14vw, 155px); left: 2%; top: auto; bottom: 12%; transform: rotate(-15deg); }
 .scrapbook-cover .cover-heart { width: 80px; right: 9%; bottom: 16%; }
-.night .bubble-name { mix-blend-mode: normal; }
+.bubble-name, .scrapbook-sticker, .night .scrapbook-sticker { mix-blend-mode: normal; }
+.cover-composition { display: flex; align-items: center; gap: 28px; width: 100%; }
+.cover-composition .bubble-name { width: 66%; max-width: none; }
+.cover-composition .cover-camera { width: 31%; transform: rotate(7deg); }
+.cover-camera svg { border-radius: 5px; box-shadow: 3px 9px 15px #51334825; }
+@media (max-width: 740px) {
+  .cover-composition { flex-direction: column; gap: 35px; }
+  .cover-composition .bubble-name { width: 100%; }
+  .cover-composition .cover-camera { width: min(280px, 65%); }
+  .scrapbook-cover .cover-butterfly { top: 0; right: 0; width: 80px; }
+}
 @media (max-width: 740px) {
   .scrapbook-cover { min-height: calc(100svh - 145px); }
   .bubble-name { max-width: none; }
