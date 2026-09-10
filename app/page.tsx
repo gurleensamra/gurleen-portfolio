@@ -116,7 +116,21 @@ export default function Home() {
         </Button>
       </header>
       <main id="home">
-        <section className="hero" aria-labelledby="intro">
+        <section className="scrapbook-cover" aria-label="Gurleen — welcome to my scrapbook">
+          <FlowerSticker className="cover-butterfly flower-hero" />
+          <FlowerSticker className="cover-flower flower-work" />
+          <FlowerSticker className="cover-heart sticker-heart" />
+          <h1 className="bubble-name" aria-label="Gurleen">
+            {['140 258 137 151', '27 738 125 148', '288 578 120 143', '166 414 101 146', '532 111 115 139', '532 111 115 139', '409 426 128 135'].map((crop, index) => (
+              <svg key={index} viewBox={crop} aria-hidden="true" focusable="false">
+                <image href={sitePath('/images/pink-bubble-alphabet.png')} width="675" height="1200" />
+              </svg>
+            ))}
+          </h1>
+          <p className="hand cover-caption">a little collection of things I make & love</p>
+          <SiteLink className="cover-scroll hand" href="#meet-gurleen">come on in ↓</SiteLink>
+        </section>
+        <section id="meet-gurleen" className="hero" aria-labelledby="intro">
           <div className="intro">
             <p className="eyebrow">
               SOFTWARE ENGINEERING + HUMAN-CENTERED DESIGN
