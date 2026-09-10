@@ -1,0 +1,26 @@
+image: node:22-bookworm
+
+stages:
+  - deploy
+
+cache:
+  key:
+    files:
+      - package-lock.json
+  paths:
+    - .npm/
+
+publish-portfolio:
+  stage: deploy
+  script:
+    - npm ci --cache .npm --prefer-offline
+    - npm run lint
+    - npm run typecheck
+    - npm run build:gitlab
+  pages:
+    publish: dist/client
+  artifacts:
+    paths:
+      - dist/client
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
