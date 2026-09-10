@@ -172,6 +172,8 @@ export default function Home() {
                 technology
               </div>
             </div>
+            <span className="tape-corner tape-corner-top" aria-hidden="true" />
+            <span className="tape-corner tape-corner-bottom" aria-hidden="true" />
             <div className="cat-sticker">
               <Button
                 className="cat-button"
@@ -207,6 +209,9 @@ export default function Home() {
             </div>
             <span className="index-label">01 — 03 / PROJECTS</span>
           </div>
+          <p className="scrap-caption hand" aria-hidden="true">
+            collected from my little corner of the internet ✿
+          </p>
           <article className="featured project-window">
             <Chrome title="01 / husky-bites.fig" />
             <div className="featured-content">
