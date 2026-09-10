@@ -51,8 +51,12 @@ button:focus-visible {
   background-image:
     url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.28'/%3E%3C/svg%3E"),
     radial-gradient(var(--dot) 0.7px, transparent 0.7px),
-    linear-gradient(115deg, color-mix(in srgb, var(--pink) 14%, transparent), transparent 36%);
-  background-size: 180px 180px, 18px 18px, 100% 100%;
+    radial-gradient(circle at 13% 7%, #f4bdd0 0, transparent 32%),
+    radial-gradient(circle at 88% 14%, #c6d6fb 0, transparent 32%),
+    radial-gradient(circle at 72% 73%, #f5d1a1 0, transparent 37%),
+    radial-gradient(circle at 18% 83%, #d1e7c2 0, transparent 31%),
+    linear-gradient(130deg, #fff7e8 0%, #f9f0ff 47%, #eaf7fa 100%);
+  background-size: 180px 180px, 18px 18px, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
   background-attachment: fixed;
   color: var(--ink);
   transition:
@@ -69,6 +73,14 @@ button:focus-visible {
   --blue: #3c5060;
   --line: #998896;
   --dot: #434354;
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E"),
+    radial-gradient(var(--dot) 0.7px, transparent 0.7px),
+    radial-gradient(circle at 17% 9%, #72557a 0, transparent 34%),
+    radial-gradient(circle at 86% 18%, #46647d 0, transparent 35%),
+    radial-gradient(circle at 74% 76%, #805975 0, transparent 37%),
+    radial-gradient(circle at 19% 82%, #405f65 0, transparent 31%),
+    linear-gradient(130deg, #232638 0%, #30293e 48%, #202f3d 100%);
 }
 .nav {
   max-width: 1256px;
