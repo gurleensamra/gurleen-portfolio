@@ -124,29 +124,26 @@ export default function Home() {
           </defs>
         </svg>
         <section className="scrapbook-cover" aria-label="Gurleen — welcome to my scrapbook">
-          <FlowerSticker className="cover-butterfly flower-hero" />
-          <FlowerSticker className="cover-flower flower-work" />
-          <FlowerSticker className="cover-heart sticker-heart" />
-          <div className="cover-composition">
-          <h1 className="bubble-name" aria-label="Gurleen">
-            {['140 258 137 151', '27 738 125 148', '288 578 120 143', '166 414 101 146', '532 111 115 139', '532 111 115 139', '409 426 128 135'].map((crop, index) => (
-              <svg key={index} viewBox={crop} aria-hidden="true" focusable="false">
-                <image filter="url(#paper-cutout)" href={sitePath('/images/pink-bubble-alphabet.png')} width="675" height="1200" />
+          <div className="cover-rail"><span>GKS / PERSONAL COMPUTER</span><span>VOL. 01 — MADE BY HAND & CODE</span></div>
+          <div className="cyber-cover-grid">
+            <div className="name-page">
+              <span className="file-tab">index / a work in progress</span>
+              <svg className="stitched-bow" viewBox="0 0 180 110" fill="none" aria-hidden="true">
+                <path d="M90 49C15-21 5 26 28 54Q58 75 90 49C165-21 175 26 152 54Q122 75 90 49ZM83 49Q62 78 40 102M97 49Q118 78 140 102" stroke="currentColor" strokeWidth="5" strokeDasharray="2 6" strokeLinecap="square" />
               </svg>
-            ))}
-          </h1>
-          <figure className="camera-portrait cover-camera">
-            <svg viewBox="40 0 525 420" aria-labelledby="camera-portrait-title">
-              <title id="camera-portrait-title">Gurleen’s portrait in a silver digital camera</title>
-              <image filter="url(#paper-cutout)" href={sitePath('/images/camera-frames.png')} width="1152" height="2048" />
-              <rect x="96" y="157" width="230" height="169" fill="#302a30" />
-              <image href={sitePath('/images/gurleen-2026.jpeg')} x="96" y="157" width="230" height="169" preserveAspectRatio="xMidYMid meet" />
-            </svg>
-            <figcaption className="hand">hi, that’s me! ♡</figcaption>
-          </figure>
+              <p className="hand cover-hello">hello, world. i’m</p>
+              <h1 className="cyber-name">Gurleen<span aria-hidden="true">✳</span></h1>
+              <p className="cover-description">Software, design & a little bit of wonder.</p>
+              <div className="cover-links"><SiteLink href="#work" className="cta">Open my projects ↗</SiteLink><SiteLink href="/about" className="text-link">Meet the person ♡</SiteLink></div>
+              <span className="page-number">01 / WELCOME TO MY CORNER OF THE INTERNET</span>
+            </div>
+            <aside className="terminal-card" aria-label="A little introduction">
+              <Chrome title="gurleen@desktop: ~" />
+              <div className="terminal-body"><p><span className="prompt-symbol">♥</span> cat about-me.txt</p><h2>Soft heart.<br />Technical mind.</h2><p className="terminal-description">Informatics @ UW<br />Software engineering<br />Human-centered design</p><div className="terminal-rule" /><p className="terminal-last">Let’s make something thoughtful.<span className="terminal-cursor" aria-hidden="true">▌</span></p></div>
+              <span className="terminal-seal" aria-hidden="true">✧</span>
+            </aside>
           </div>
-          <p className="hand cover-caption">a little collection of things I make & love</p>
-          <SiteLink className="cover-scroll hand" href="#meet-gurleen">come on in ↓</SiteLink>
+          <div className="cover-bottom"><span>DESIGNED TO FEEL HUMAN</span><SiteLink href="#meet-gurleen">SCROLL TO EXPLORE ↓</SiteLink><span>CODE + CURIOSITY</span></div>
         </section>
         <section id="meet-gurleen" className="hero" aria-labelledby="intro">
           <div className="intro">

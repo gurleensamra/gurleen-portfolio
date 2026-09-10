@@ -1,0 +1,53 @@
+/* Handmade paper meets a personal computer. Scoped specificity keeps the
+   shared project and About pages consistent with the new homepage. */
+.portfolio.portfolio {
+  --bg: #f5dbe7; --paper: #fff4f6; --ink: #412b3d; --muted: #705569;
+  --pink: #efbad3; --blue: #dfc5e5; --line: #a57997;
+  background-color: var(--bg);
+  background-image: linear-gradient(#fff7 1px, transparent 1px), linear-gradient(90deg,#fff7 1px, transparent 1px), radial-gradient(ellipse at 80% 10%,#e9c6e4,transparent 65%);
+  background-size: 20px 20px,20px 20px,100% 100%;
+}
+.portfolio.night.night { --bg:#241923; --paper:#352332; --ink:#ffedf6; --muted:#dbb6cb; --pink:#703c60; --line:#a66c93; background-image:linear-gradient(#e98dbc12 1px,transparent 1px),linear-gradient(90deg,#e98dbc12 1px,transparent 1px),radial-gradient(ellipse at 80% 10%,#4c2647,transparent 65%); }
+.portfolio .nav { min-height:90px; }
+.portfolio .brand { font-style:italic; font-weight:normal; }
+.portfolio nav { font-family:monospace; font-size:12px; }
+.portfolio .scrapbook-cover { min-height:calc(100svh - 90px); padding:15px 0 30px; display:flex; justify-content:space-between; gap:45px; }
+.cover-rail,.cover-bottom { width:100%; display:flex; justify-content:space-between; gap:20px; font:10px/1.7 monospace; letter-spacing:1px; border-top:1px solid var(--line); padding-top:15px; }
+.cyber-cover-grid { width:100%; display:grid; grid-template-columns:1.4fr 1fr; gap:45px; align-items:center; padding:20px 0 35px; }
+.name-page { position:relative; padding:45px 32px 35px; background:var(--paper); box-shadow:5px 7px 0 #8d517c16; border:1px solid var(--line); transform:rotate(-2deg); }
+.name-page::after { content:''; position:absolute; inset:9px; border:1px dashed var(--line); pointer-events:none; }
+.file-tab { position:absolute; top:-22px; left:20px; padding:7px 14px; background:var(--paper); border:1px solid var(--line); font:11px monospace; transform:rotate(1deg); }
+.stitched-bow { position:absolute; width:100px; right:20px; top:18px; color:#bb5085; }
+.cover-hello { font-size:22px; margin:25px 0 8px; }
+.portfolio .cyber-name { font-family:Georgia,serif; font-style:italic; font-size:clamp(60px,8vw,108px); letter-spacing:-6px; line-height:1; margin:0 0 22px; color:var(--ink); white-space:nowrap; }
+.portfolio .cyber-name span { color:#cb3f89; font-size:32px; margin-left:8px; vertical-align:top; }
+.cover-description { font-size:16px; line-height:1.7; max-width:270px; }
+.cover-links { display:flex; flex-wrap:wrap; align-items:center; gap:20px; margin:26px 0 40px; }
+.portfolio .cta { background:#45273e; color:#fff0f7; border:1px solid #45273e; box-shadow:3px 3px 0 #e95caa; border-radius:3px; font:13px monospace; gap:18px; }
+.page-number { font:9px monospace; letter-spacing:.6px; }
+.terminal-card { position:relative; background:#30202e; color:#fceaf6; border:1px solid #58374c; border-radius:9px; box-shadow:8px 9px 0 #9e547837,0 0 35px #ed72b529; transform:rotate(3deg); }
+.terminal-card .window-bar { border-radius:8px 8px 0 0; background:#4b2b43; color:#f5cade; border-color:#85536f; font-size:11px; }
+.terminal-body { padding:27px; font:12px/1.9 monospace; }
+.prompt-symbol { color:#ff84c6; }
+.terminal-body h2 { font:italic 36px/1.15 Georgia,serif; margin:25px 0; letter-spacing:-1px; }
+.terminal-description { color:#d2afc8; }
+.terminal-rule { border-top:1px dashed #77536b; margin:25px 0; }
+.terminal-last { font-size:11px; color:#f4b3d7; }
+.terminal-cursor { animation:cursor-pulse 1.2s steps(2) infinite; }
+.terminal-seal { position:absolute; bottom:-20px; right:15px; background:#edc3d9; color:#64354f; border:1px dashed #8f5b7c; border-radius:50%; width:55px; height:55px; display:grid; place-items:center; font-size:35px; transform:rotate(-12deg); }
+.portfolio .hero { padding-top:85px; border-top:1px dashed var(--line); }
+.portfolio .window-bar { background:#44293e; color:#f5d6e9; }
+.portfolio .project-window { border-radius:4px; }
+.portfolio .scrapbook-sticker { display:none; }
+.portfolio .about-note { border:1px dashed var(--line); padding:16px 16px 25px; }
+@keyframes cursor-pulse { 50% { opacity:0; } }
+@media(max-width:740px) {
+  .portfolio .scrapbook-cover { gap:35px; padding-top:20px; }
+  .cyber-cover-grid { grid-template-columns:1fr; gap:45px; padding:5px 4px 20px; }
+  .name-page { padding:45px 25px 25px; }
+  .portfolio .cyber-name { font-size:clamp(60px,14vw,95px); letter-spacing:-4px; }
+  .cover-rail span:last-child,.cover-bottom span:last-child { display:none; }
+  .terminal-body h2 { font-size:32px; }
+  .cover-links { gap:12px; }
+}
+@media(prefers-reduced-motion:reduce) { .terminal-cursor { animation:none; } }
