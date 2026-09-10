@@ -152,10 +152,10 @@ export default function Home() {
                 <figure className="polaroid">
                   <Image
                     unoptimized
-                    src="/images/gurleen.jpg"
+                    src="/images/gurleen-2026.jpeg"
                     alt="Gurleen Samra"
-                    width="1984"
-                    height="2087"
+                    width="4000"
+                    height="6000"
                   />
                   <figcaption className="hand">hi, that’s me! ♡</figcaption>
                 </figure>
@@ -346,10 +346,10 @@ export default function Home() {
           <figure className="about-note">
             <Image
               unoptimized
-              src="/images/gurleen.jpg"
+              src="/images/gurleen-2026.jpeg"
               alt="Gurleen"
-              width={1984}
-              height={2087}
+              width={4000}
+              height={6000}
               style={{
                 width: '100%',
                 height: '280px',

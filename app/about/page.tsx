@@ -21,10 +21,10 @@ export default function About() {
         <figure className="polaroid">
           <Image
             unoptimized
-            src="/images/gurleen.jpg"
+            src="/images/gurleen-2026.jpeg"
             alt="Gurleen Samra"
-            width={1984}
-            height={2087}
+            width={4000}
+            height={6000}
           />
           <figcaption className="hand">hi again ♡</figcaption>
         </figure>

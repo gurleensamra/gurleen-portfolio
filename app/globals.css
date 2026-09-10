@@ -269,9 +269,38 @@ h1 svg {
     5px 6px 0 color-mix(in srgb, var(--pink) 65%, transparent),
     0 12px 18px color-mix(in srgb, var(--ink) 10%, transparent);
 }
+.project-window {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.project-window:hover {
+  transform: translateY(-4px) rotate(-0.25deg);
+  box-shadow:
+    6px 8px 0 color-mix(in srgb, var(--pink) 78%, transparent),
+    0 16px 24px color-mix(in srgb, var(--ink) 14%, transparent);
+}
 .profile-window {
   position: relative;
   z-index: 1;
+}
+.profile-window::before {
+  content: '✦';
+  position: absolute;
+  z-index: 4;
+  right: 14px;
+  top: 41px;
+  color: #b58a43;
+  font-size: 20px;
+  transform: rotate(14deg);
+}
+.profile-window::after {
+  content: '';
+  position: absolute;
+  z-index: 3;
+  left: 14px;
+  right: 14px;
+  bottom: 38px;
+  border-bottom: 1px dashed color-mix(in srgb, var(--line) 62%, transparent);
+  pointer-events: none;
 }
 .tape-corner {
   position: absolute;
@@ -321,6 +350,19 @@ h1 svg {
   box-shadow: 2px 5px 10px #433b3c35;
   flex-shrink: 0;
   margin: 0;
+  position: relative;
+}
+.polaroid::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  width: 48px;
+  height: 15px;
+  right: -19px;
+  top: -10px;
+  background: color-mix(in srgb, var(--pink) 76%, transparent);
+  transform: rotate(25deg);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--paper) 40%, transparent);
 }
 .polaroid img {
   width: 100%;
@@ -596,6 +638,12 @@ dd {
 }
 .text-link:hover {
   color: #a75f7b;
+}
+.text-link span {
+  transition: transform 0.2s ease;
+}
+.text-link:hover span {
+  transform: translate(3px, -2px);
 }
 .project-copy .project-meta {
   font-size: 11px;
