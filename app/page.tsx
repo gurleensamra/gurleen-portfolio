@@ -149,16 +149,6 @@ export default function Home() {
             <div className="profile-window">
               <Chrome title="a little introduction.txt" />
               <div className="profile-inner">
-                <figure className="polaroid">
-                  <Image
-                    unoptimized
-                    src="/images/gurleen-2026.jpeg"
-                    alt="Gurleen Samra"
-                    width="4000"
-                    height="6000"
-                  />
-                  <figcaption className="hand">hi, that’s me! ♡</figcaption>
-                </figure>
                 <div className="mini-bio">
                   <span className="tiny-label">BASED IN CURIOSITY</span>
                   <p>
@@ -352,9 +342,7 @@ export default function Home() {
               height={6000}
               style={{
                 width: '100%',
-                height: '280px',
-                objectFit: 'cover',
-                objectPosition: '50% 28%',
+                height: 'auto',
               }}
             />
             <figcaption className="hand">Gurleen Kaur Samra</figcaption>
