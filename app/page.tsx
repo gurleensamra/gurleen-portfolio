@@ -350,7 +350,12 @@ export default function Home() {
               alt="Gurleen"
               width={1984}
               height={2087}
-              style={{ width: '100%', height: '280px', objectFit: 'cover' }}
+              style={{
+                width: '100%',
+                height: '280px',
+                objectFit: 'cover',
+                objectPosition: '50% 28%',
+              }}
             />
             <figcaption className="hand">Gurleen Kaur Samra</figcaption>
           </figure>
