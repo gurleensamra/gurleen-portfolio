@@ -159,6 +159,15 @@ export default function Home() {
             <div className="profile-window">
               <Chrome title="a little introduction.txt" />
               <div className="profile-inner">
+                <figure className="camera-portrait">
+                  <svg viewBox="738 978 383 217" aria-labelledby="camera-portrait-title">
+                    <title id="camera-portrait-title">Gurleen’s portrait in a pink digital camera</title>
+                    <image href={sitePath('/images/camera-frames.png')} width="1152" height="2048" />
+                    <rect x="780" y="1010" width="232" height="168" fill="#302a30" />
+                    <image href={sitePath('/images/gurleen-2026.jpeg')} x="780" y="1010" width="232" height="168" preserveAspectRatio="xMidYMid meet" />
+                  </svg>
+                  <figcaption className="hand">hi, that’s me! ♡</figcaption>
+                </figure>
                 <div className="mini-bio">
                   <span className="tiny-label">BASED IN CURIOSITY</span>
                   <p>

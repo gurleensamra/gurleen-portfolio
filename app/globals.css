@@ -342,6 +342,18 @@ h1 svg {
   padding: 29px 23px 25px;
   align-items: center;
 }
+.camera-portrait {
+  width: 58%;
+  flex-shrink: 0;
+  margin: 0;
+  transform: rotate(-4deg);
+}
+.camera-portrait svg { display: block; width: 100%; height: auto; overflow: hidden; }
+.camera-portrait figcaption { text-align: center; padding-top: 12px; font-size: 17px; }
+@media (max-width: 480px) {
+  .profile-inner:has(.camera-portrait) { flex-direction: column; align-items: flex-start; }
+  .camera-portrait { width: 100%; }
+}
 .polaroid {
   width: 46%;
   background: #fffaf1;
