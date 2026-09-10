@@ -48,6 +48,9 @@ function Chrome({ title }: { title: string }) {
     </div>
   );
 }
+function FlowerSticker({ className }: { className: string }) {
+  return <span className={`flower-sticker ${className}`} aria-hidden="true" />;
+}
 let memoryNight = false;
 function subscribeTheme(callback: () => void) {
   window.addEventListener('storage', callback);
@@ -142,6 +145,7 @@ export default function Home() {
             <div className="floating-star" aria-hidden="true">
               ✦
             </div>
+            <FlowerSticker className="flower-lily flower-hero" />
             <div className="profile-window">
               <Chrome title="a little introduction.txt" />
               <div className="profile-inner">
@@ -212,6 +216,7 @@ export default function Home() {
           <p className="scrap-caption hand" aria-hidden="true">
             collected from my little corner of the internet ✿
           </p>
+          <FlowerSticker className="flower-lotus flower-work" />
           <article className="featured project-window">
             <Chrome title="01 / husky-bites.fig" />
             <div className="featured-content">
@@ -337,6 +342,7 @@ export default function Home() {
           </div>
         </section>
         <section id="about" className="about-section">
+          <FlowerSticker className="flower-orchid flower-about" />
           <figure className="about-note">
             <Image
               unoptimized
