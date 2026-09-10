@@ -1,6 +1,6 @@
 # Gurleen’s portfolio
 
-This is the editable source for the current portfolio, with native project and About pages and repaired navigation. It runs locally and exports static files for GitLab Pages. You do not need a Sites account, Cloudflare Worker, API key, or backend to run it.
+This is the editable source for the current portfolio, with native project and About pages and repaired navigation. It runs locally and exports static files for GitHub Pages. You do not need a Sites account, Cloudflare Worker, API key, or backend to run it.
 
 **Design status:** this is the current pastel desktop prototype. It does not yet recreate the illustrated San Francisco / Seattle mockup. That visual reference is saved locally in `work/reference/original-mockup.png`; the next design direction is in `DESIGN-NEXT.md`.
 
@@ -41,6 +41,18 @@ npm run preview
 ```
 
 Static output is `dist/client/`. The local production preview is at `http://127.0.0.1:4173/`. Only upload `dist/client` as the hosted website, never the whole source or `dist/server`.
+
+## Publish with GitHub Pages
+
+This repository is set up to stay **private** while GitHub Pages serves the built portfolio publicly. Pushes to `main` automatically run checks, build the static site, and deploy it.
+
+Your first Pages URL will be:
+
+```
+https://gurleensamra.github.io/gurleen-portfolio/
+```
+
+After the first workflow succeeds, go to the repository’s **Settings → Pages** to confirm **GitHub Actions** is selected as the source. You can add your custom domain there later.
 
 ## Put the code on GitLab
 
