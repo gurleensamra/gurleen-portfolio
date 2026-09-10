@@ -192,14 +192,18 @@ main {
 .scrapbook-cover .cover-flower { width: clamp(90px, 14vw, 155px); left: 2%; top: auto; bottom: 12%; transform: rotate(-15deg); }
 .scrapbook-cover .cover-heart { width: 80px; right: 9%; bottom: 16%; }
 .bubble-name, .scrapbook-sticker, .night .scrapbook-sticker { mix-blend-mode: normal; }
-.cover-composition { display: flex; align-items: center; gap: 28px; width: 100%; }
-.cover-composition .bubble-name { width: 66%; max-width: none; }
-.cover-composition .cover-camera { width: 31%; transform: rotate(7deg); }
-.cover-camera svg { border-radius: 5px; box-shadow: 3px 9px 15px #51334825; }
+.cover-composition { display: flex; align-items: flex-start; gap: 0; width: 100%; }
+.cover-composition .bubble-name { width: 47%; max-width: none; margin-top: -65px; position: relative; z-index: 3; }
+.cover-composition .bubble-name svg + svg { margin-left: -12px; }
+.cover-composition .cover-camera { width: min(64%, 70svh); margin-left: -4%; margin-top: 0; transform: rotate(4deg); }
+.cover-camera svg { border-radius: 0; box-shadow: none; filter: drop-shadow(3px 9px 8px #51334825); }
+.scrapbook-cover { padding-top: 95px; padding-bottom: 100px; }
+.scrapbook-cover .cover-butterfly { width: 110px; top: 0; }
 @media (max-width: 740px) {
-  .cover-composition { flex-direction: column; gap: 35px; }
-  .cover-composition .bubble-name { width: 100%; }
-  .cover-composition .cover-camera { width: min(280px, 65%); }
+  .cover-composition { flex-direction: column; gap: 25px; }
+  .cover-composition .bubble-name { width: 85%; margin-top: 0; }
+  .cover-composition .bubble-name svg + svg { margin-left: -7px; }
+  .cover-composition .cover-camera { width: 96%; margin: 0 0 0 4%; }
   .scrapbook-cover .cover-butterfly { top: 0; right: 0; width: 80px; }
 }
 @media (max-width: 740px) {

@@ -136,11 +136,11 @@ export default function Home() {
             ))}
           </h1>
           <figure className="camera-portrait cover-camera">
-            <svg viewBox="738 978 383 217" aria-labelledby="camera-portrait-title">
-              <title id="camera-portrait-title">Gurleen’s portrait in a pink digital camera</title>
-              <image href={sitePath('/images/camera-frames.png')} width="1152" height="2048" />
-              <rect x="780" y="1010" width="232" height="168" fill="#302a30" />
-              <image href={sitePath('/images/gurleen-2026.jpeg')} x="780" y="1010" width="232" height="168" preserveAspectRatio="xMidYMid meet" />
+            <svg viewBox="40 0 525 420" aria-labelledby="camera-portrait-title">
+              <title id="camera-portrait-title">Gurleen’s portrait in a silver digital camera</title>
+              <image filter="url(#paper-cutout)" href={sitePath('/images/camera-frames.png')} width="1152" height="2048" />
+              <rect x="96" y="157" width="230" height="169" fill="#302a30" />
+              <image href={sitePath('/images/gurleen-2026.jpeg')} x="96" y="157" width="230" height="169" preserveAspectRatio="xMidYMid meet" />
             </svg>
             <figcaption className="hand">hi, that’s me! ♡</figcaption>
           </figure>
