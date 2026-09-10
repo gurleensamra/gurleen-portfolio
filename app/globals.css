@@ -426,17 +426,18 @@ h1 svg {
   position: absolute;
   display: block;
   width: 160px;
-  aspect-ratio: 1;
+  height: 145px;
+  overflow: hidden;
   pointer-events: none;
   z-index: 2;
   background-image: url('/images/floral-sticker-sheet.png');
   background-repeat: no-repeat;
-  background-size: 200% 400%;
+  background-size: 500px 500px;
   filter: drop-shadow(2px 5px 4px color-mix(in srgb, var(--ink) 16%, transparent));
 }
-.flower-lily { background-position: 0 0; }
-.flower-orchid { background-position: 100% 0; }
-.flower-lotus { background-position: 0 66.667%; }
+.flower-lily { background-position: -80px -7px; }
+.flower-orchid { background-position: -270px -5px; }
+.flower-lotus { height: 140px; background-position: -90px -285px; }
 .flower-hero {
   width: 180px;
   right: -74px;
