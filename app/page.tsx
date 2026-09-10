@@ -2,6 +2,7 @@
 /* oxlint-disable next/no-html-link-for-pages */
 'use client';
 import SiteLink from '@/components/site-link';
+import { sitePath } from '@/lib/site-path';
 import { useState, useSyncExternalStore } from 'react';
 import Image from '@/components/site-image';
 import { Button } from '@/components/ui/button';
@@ -49,7 +50,15 @@ function Chrome({ title }: { title: string }) {
   );
 }
 function FlowerSticker({ className }: { className: string }) {
-  return <span className={`flower-sticker ${className}`} aria-hidden="true" />;
+  const crop = className.includes('sticker-heart') ? '315 262 198 160'
+    : className.includes('flower-hero') ? '690 0 462 490'
+    : className.includes('flower-work') ? '12 20 320 360'
+    : '20 416 485 330';
+  return (
+    <svg className={`scrapbook-sticker ${className}`} viewBox={crop} aria-hidden="true" focusable="false">
+      <image href={sitePath('/images/scrapbook-stickers.png')} width="1152" height="2048" />
+    </svg>
+  );
 }
 let memoryNight = false;
 function subscribeTheme(callback: () => void) {
@@ -146,6 +155,7 @@ export default function Home() {
               ✦
             </div>
             <FlowerSticker className="flower-lily flower-hero" />
+            <FlowerSticker className="sticker-heart" />
             <div className="profile-window">
               <Chrome title="a little introduction.txt" />
               <div className="profile-inner">
