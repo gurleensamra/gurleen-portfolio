@@ -29,7 +29,7 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run typecheck
-      - run: NEXT_PUBLIC_BASE_PATH=/${{ github.event.repository.name }} npm run build:gitlab
+      - run: NEXT_PUBLIC_BASE_PATH='' npm run build:gitlab
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist/client
