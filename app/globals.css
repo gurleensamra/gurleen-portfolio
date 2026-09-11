@@ -2,6 +2,13 @@
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
 @import './scrapbook-tech.css';
+@font-face {
+  font-family: 'VT323';
+  src: url('/fonts/vt323.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   font-family: Arial, Helvetica, sans-serif;
   color: #433b3c;
@@ -298,7 +305,7 @@ h1 svg {
   line-height: 20px;
 }
 .hand {
-  font-family: 'Bradley Hand', 'Segoe Print', 'Comic Sans MS', cursive;
+  font-family: 'VT323', monospace;
   font-weight: normal;
 }
 .hero-note {

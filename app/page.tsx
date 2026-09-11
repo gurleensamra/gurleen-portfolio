@@ -183,7 +183,7 @@ export default function Home() {
               </b>
             </h1>
             <p className="hero-copy">
-              i write code, make things, and have too many tabs open.
+              i write code and play mario kart
             </p>
             <p className="bio-line">
               Informatics at UW · SWE intern at NVIDIA
@@ -435,7 +435,7 @@ export default function Home() {
         <footer id="contact">
           <span className="hand">Have something in mind?</span>
           <h2>
-            Let’s build something
+            lets build it!
           </h2>
           <SiteLink className="cta" href="mailto:gurleenksamra@gmail.com">
             Say hello <span>↗</span>
