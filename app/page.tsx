@@ -3,7 +3,7 @@
 'use client';
 import SiteLink from '@/components/site-link';
 import { sitePath } from '@/lib/site-path';
-import { useState, useSyncExternalStore } from 'react';
+import { useId, useState, useSyncExternalStore } from 'react';
 import Image from '@/components/site-image';
 import { Button } from '@/components/ui/button';
 const resume =
@@ -57,6 +57,22 @@ function FlowerSticker({ className }: { className: string }) {
   return (
     <svg className={`scrapbook-sticker ${className}`} viewBox={crop} aria-hidden="true" focusable="false">
       <image filter="url(#paper-cutout)" href={sitePath('/images/scrapbook-stickers.png')} width="1152" height="2048" />
+    </svg>
+  );
+}
+function LaceOrnament({ variant }: { variant: 'corner' | 'flourish' }) {
+  const id = useId();
+  return (
+    <svg className={`lace-ornament lace-${variant}`} viewBox="0 0 736 920" aria-hidden="true" focusable="false">
+      <defs>
+        <filter id={`${id}-invert`} colorInterpolationFilters="sRGB">
+          <feColorMatrix type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" />
+        </filter>
+        <mask id={`${id}-mask`} x="0" y="0" width="736" height="920" maskUnits="userSpaceOnUse" style={{ maskType: 'luminance' }}>
+          <image href={sitePath(`/images/lace-${variant}.png`)} width="736" height="920" filter={`url(#${id}-invert)`} />
+        </mask>
+      </defs>
+      <rect width="736" height="920" fill="currentColor" mask={`url(#${id}-mask)`} />
     </svg>
   );
 }
@@ -127,6 +143,8 @@ export default function Home() {
           <div className="cover-rail"><span>GKS / PERSONAL COMPUTER</span><span>VOL. 01 — MADE BY HAND & CODE</span></div>
           <div className="cyber-cover-grid">
             <div className="name-page">
+              <LaceOrnament variant="corner" />
+              <LaceOrnament variant="flourish" />
               <span className="file-tab">index / a work in progress</span>
               <svg className="stitched-bow" viewBox="0 0 180 110" fill="none" aria-hidden="true">
                 <path d="M90 49C15-21 5 26 28 54Q58 75 90 49C165-21 175 26 152 54Q122 75 90 49ZM83 49Q62 78 40 102M97 49Q118 78 140 102" stroke="currentColor" strokeWidth="5" strokeDasharray="2 6" strokeLinecap="square" />

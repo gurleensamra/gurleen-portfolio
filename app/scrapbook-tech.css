@@ -51,3 +51,13 @@
   .cover-links { gap:12px; }
 }
 @media(prefers-reduced-motion:reduce) { .terminal-cursor { animation:none; } }
+.name-page .lace-ornament { position:absolute; width:140px; height:auto; color:#85506f; opacity:.55; pointer-events:none; }
+.name-page .lace-corner { top:14px; left:12px; width:100px; }
+.name-page .lace-flourish { bottom:24px; right:12px; width:100px; }
+.name-page .cover-hello { margin-top:55px; }
+.name-page .page-number { display:block; max-width:calc(100% - 80px); line-height:1.7; }
+.night .name-page .lace-ornament { color:#efb4d4; }
+@media(max-width:740px) {
+  .name-page .lace-corner { width:80px; }
+  .name-page .lace-flourish { width:75px; }
+}
