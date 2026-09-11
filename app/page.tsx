@@ -152,7 +152,7 @@ export default function Home() {
               </svg>
               <p className="hand cover-hello">hello, world. i’m</p>
               <h1 className="cyber-name">Gurleen<span aria-hidden="true"><Asterisk /></span></h1>
-              <p className="cover-description">Software, design & a little bit of wonder.</p>
+              <p className="cover-description">Software, design & a little bit of whimsy.</p>
               <p className="bio-line">Informatics at UW · SWE intern at NVIDIA</p>
               <div className="cover-links"><SiteLink href="#work" className="cta">Open my projects ↗</SiteLink></div>
               <span className="page-number">01 / WELCOME TO MY CORNER OF THE INTERNET</span>
