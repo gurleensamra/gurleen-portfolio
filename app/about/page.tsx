@@ -7,9 +7,6 @@ export const metadata = { title: 'About Gurleen — Software, Design & Art' };
 export default function About() {
   return (
     <PortfolioFrame>
-      <SiteLink href="/" className="text-link">
-        ← Back home
-      </SiteLink>
       <header className="story-heading">
         <p className="eyebrow">ABOUT ME</p>
         <h1>Gurleen Kaur Samra</h1>
