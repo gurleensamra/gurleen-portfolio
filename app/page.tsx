@@ -328,8 +328,8 @@ export default function Home() {
               >
                 <Image
                   unoptimized
-                  src="/images/mini-git-y2k.svg"
-                  alt="Chrome disc illustration for Mini Git"
+                  src="/images/butterfly-stitch.svg"
+                  alt="Lilac cross-stitch butterfly on plum graph paper"
                   width="1245"
                   height="1245"
                   loading="lazy"
@@ -358,8 +358,8 @@ export default function Home() {
               >
                 <Image
                   unoptimized
-                  src="/images/swe-y2k.svg"
-                  alt="Chrome orbital star illustration for SWE design work"
+                  src="/images/heart-stitch.svg"
+                  alt="Lilac cross-stitch heart on plum graph paper"
                   width="2016"
                   height="2690"
                   loading="lazy"
