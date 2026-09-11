@@ -57,6 +57,14 @@
 .name-page .cover-hello { margin-top:55px; }
 .name-page .page-number { display:block; max-width:calc(100% - 80px); line-height:1.7; }
 .night .name-page .lace-ornament { color:#efb4d4; }
+.nvidia-summary { background:#30202e; color:#f8e6f1; padding:40px; display:flex; flex-direction:column; justify-content:center; gap:20px; }
+.nvidia-summary .eyebrow { color:#dec0d3; }
+.nvidia-summary strong { font:italic 90px/1 Georgia,serif; color:#e8afce; }
+.nvidia-summary p { margin:0; font:15px/1.7 monospace; }
+.benchmark-flow { border-block:1px dashed #85536f; padding:18px 0; font:12px monospace; letter-spacing:1px; }
+.notion-construction { margin-top:30px; border-style:dashed!important; }
+.construction-label { display:inline-block; padding:7px 10px; background:var(--pink); border:1px dashed var(--line); font:11px monospace; letter-spacing:1px; }
+.notion-construction p { min-height:0; max-width:650px; }
 @media(max-width:740px) {
   .name-page .lace-corner { width:80px; }
   .name-page .lace-flourish { width:75px; }

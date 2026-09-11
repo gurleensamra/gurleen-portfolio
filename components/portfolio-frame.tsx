@@ -4,8 +4,7 @@
 import SiteLink from '@/components/site-link';
 import { useSyncExternalStore } from 'react';
 import { Button } from '@/components/ui/button';
-const resume =
-  'https://drive.google.com/file/d/1BTmVJU_RXWrYaxeRcfbER-kkpEeJd01M/view?usp=sharing';
+const resume = '/gurleen-samra-resume.pdf';
 let fallback = false;
 function subscribe(cb: () => void) {
   window.addEventListener('storage', cb);

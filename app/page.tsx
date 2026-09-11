@@ -6,8 +6,7 @@ import { sitePath } from '@/lib/site-path';
 import { useId, useState, useSyncExternalStore } from 'react';
 import Image from '@/components/site-image';
 import { Button } from '@/components/ui/button';
-const resume =
-  'https://drive.google.com/file/d/1BTmVJU_RXWrYaxeRcfbER-kkpEeJd01M/view?usp=sharing';
+const resume = '/gurleen-samra-resume.pdf';
 const base = '/projects/';
 function Cat({ sleeping = false }: { sleeping?: boolean }) {
   return (
@@ -258,69 +257,65 @@ export default function Home() {
                 <span className="hand">made by me, for people</span>
               </h2>
             </div>
-            <span className="index-label">01 — 03 / PROJECTS</span>
+            <span className="index-label">01 — 04 / SELECTED WORK</span>
           </div>
           <p className="scrap-caption hand" aria-hidden="true">
             collected from my little corner of the internet ✿
           </p>
           <FlowerSticker className="flower-lotus flower-work" />
           <article className="featured project-window">
-            <Chrome title="01 / husky-bites.fig" />
+            <Chrome title="01 / nvidia / evaluation-framework.py" />
             <div className="featured-content">
-              <SiteLink
-                className="project-image dining"
-                href={`${base}uw-dining-app-ux-case-study`}
-              >
-                <Image
-                  unoptimized
-                  src="/images/husky-bites.png"
-                  width="1362"
-                  height="1362"
-                  alt="Husky Bites dining app project preview from Gurleen’s original portfolio"
-                />
-                <span className="image-note hand">
-                  good food, student budget
-                </span>
-              </SiteLink>
+              <div className="nvidia-summary">
+                <span className="eyebrow">NVIDIA / SOFTWARE ENGINEERING</span>
+                <strong>200+</strong>
+                <p>expert-validated historical cases</p>
+                <div className="benchmark-flow">DIAGNOSE → SCORE → COMPARE</div>
+                <p>AI-assisted log analysis<br />& root-cause diagnosis</p>
+                <span className="hand">making diagnostic quality measurable</span>
+              </div>
               <div className="project-copy">
                 <div className="tags">
-                  <span>UX RESEARCH</span>
-                  <span>PRODUCT DESIGN</span>
+                  <span>PYTHON</span>
+                  <span>AI EVALUATION</span>
                 </div>
-                <h3>Husky Bites</h3>
+                <h3>NVIDIA internship</h3>
                 <p className="project-deck">
-                  Helping students find a meal
+                  Evaluating AI-assisted diagnostics
                   <br />
-                  that fits their life.
+                  with reproducible evidence.
                 </p>
                 <p>
-                  Affordable, nutritious, nearby: a dining app concept that
-                  helps UW students balance all three.
+                  Built a Python evaluation harness that scaled coverage from
+                  dozens to 200+ expert-validated historical cases and enabled
+                  blinded comparisons across agent backends.
                 </p>
                 <dl>
                   <div>
-                    <dt>The approach</dt>
+                    <dt>Scoring & reliability</dt>
                     <dd>
-                      Student interviews → dietary & budget filters → map-based
-                      discovery.
+                      Developed deterministic and ensemble-based semantic scoring
+                      for diagnostic quality, evidence grounding, abstention,
+                      reliability, and latency. Added stage-level timing and error traces.
                     </dd>
                   </div>
                   <div>
-                    <dt>What we learned</dt>
+                    <dt>Making results useful</dt>
                     <dd>
-                      Three usability tests surfaced extra steps in filtering.
-                      The team simplified the flow and clarified selections.
+                      Created a live dashboard and CI-ready reports with per-case
+                      drilldowns and release comparisons. Extended a Kubernetes-native
+                      framework with secure container and API adapters.
                     </dd>
                   </div>
                 </dl>
                 <SiteLink
                   className="text-link"
-                  href={`${base}uw-dining-app-ux-case-study`}
+                  href={resume}
                 >
-                  Read the case study <span>↗</span>
+                  View résumé <span>↗</span>
                 </SiteLink>
                 <p className="project-meta">
-                  Team course project · Figma · Research & prototyping
+                  Software Engineering Intern · Santa Clara · June 2026–Present
                 </p>
               </div>
             </div>
@@ -388,6 +383,17 @@ export default function Home() {
             </article>
           </div>
         </section>
+        <article className="project-window notion-construction">
+          <Chrome title="04 / canvas-to-notion / in-progress" />
+          <div className="small-project-copy">
+            <span className="construction-label">UNDER CONSTRUCTION</span>
+            <h3>Canvas → Notion</h3>
+            <p>A personal project exploring how to bring Canvas coursework and
+              deadlines into a Notion workspace. Currently being built; a demo
+              and project write-up will follow.</p>
+            <span className="hand">still on the workbench ♡</span>
+          </div>
+        </article>
         <section id="about" className="about-section">
           <FlowerSticker className="flower-orchid flower-about" />
           <figure className="about-note">
