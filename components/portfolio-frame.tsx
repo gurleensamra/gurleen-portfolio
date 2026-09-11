@@ -1,6 +1,7 @@
 /* Native anchors intentionally avoid the deployed vinext Link navigation failure. */
 /* oxlint-disable next/no-html-link-for-pages */
 'use client';
+import Asterisk from '@/components/asterisk';
 import SiteLink from '@/components/site-link';
 import { useSyncExternalStore } from 'react';
 import { Button } from '@/components/ui/button';
@@ -41,7 +42,7 @@ export default function PortfolioFrame({
       </SiteLink>
       <header className="nav">
         <SiteLink className="brand" href="/" aria-label="Gurleen Samra home">
-          gks<span>✳</span>
+          gks<span><Asterisk /></span>
         </SiteLink>
         <nav aria-label="Main navigation">
           <SiteLink href="/#work">My work</SiteLink>

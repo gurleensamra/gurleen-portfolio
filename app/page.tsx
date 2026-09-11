@@ -1,6 +1,7 @@
 /* Native anchors intentionally avoid the deployed vinext Link navigation failure. */
 /* oxlint-disable next/no-html-link-for-pages */
 'use client';
+import Asterisk from '@/components/asterisk';
 import SiteLink from '@/components/site-link';
 import DesktopToys from '@/components/desktop-toys';
 import { sitePath } from '@/lib/site-path';
@@ -109,7 +110,7 @@ export default function Home() {
       </SiteLink>
       <header className="nav">
         <SiteLink className="brand" href="#home" aria-label="Gurleen Samra home">
-          gks<span>✳</span>
+          gks<span><Asterisk /></span>
         </SiteLink>
         <nav aria-label="Main navigation">
           <SiteLink href="#work">My work</SiteLink>
@@ -150,10 +151,10 @@ export default function Home() {
                 <path d="M90 49C15-21 5 26 28 54Q58 75 90 49C165-21 175 26 152 54Q122 75 90 49ZM83 49Q62 78 40 102M97 49Q118 78 140 102" stroke="currentColor" strokeWidth="5" strokeDasharray="2 6" strokeLinecap="square" />
               </svg>
               <p className="hand cover-hello">hello, world. i’m</p>
-              <h1 className="cyber-name">Gurleen<span aria-hidden="true">✳</span></h1>
+              <h1 className="cyber-name">Gurleen<span aria-hidden="true"><Asterisk /></span></h1>
               <p className="cover-description">Software, design & a little bit of wonder.</p>
               <p className="bio-line">Informatics at UW · SWE intern at NVIDIA</p>
-              <div className="cover-links"><SiteLink href="#work" className="cta">Open my projects ↗</SiteLink><SiteLink href="/about" className="text-link">Meet the person ♡</SiteLink></div>
+              <div className="cover-links"><SiteLink href="#work" className="cta">Open my projects ↗</SiteLink></div>
               <span className="page-number">01 / WELCOME TO MY CORNER OF THE INTERNET</span>
             </div>
             <aside className="terminal-card" aria-label="A little introduction">
@@ -178,7 +179,7 @@ export default function Home() {
                 </svg>
               </span>
               <b className="hello-star" aria-hidden="true">
-                ✳
+                <Asterisk />
               </b>
             </h1>
             <p className="hero-copy">
@@ -327,8 +328,8 @@ export default function Home() {
               >
                 <Image
                   unoptimized
-                  src="/images/mini-git.png"
-                  alt="Mini-Git project artwork from Gurleen’s portfolio"
+                  src="/images/mini-git-y2k.svg"
+                  alt="Chrome disc illustration for Mini Git"
                   width="1245"
                   height="1245"
                   loading="lazy"
@@ -357,8 +358,8 @@ export default function Home() {
               >
                 <Image
                   unoptimized
-                  src="/images/swe.png"
-                  alt="Society of Women Engineers at UW event and branding artwork"
+                  src="/images/swe-y2k.svg"
+                  alt="Chrome orbital star illustration for SWE design work"
                   width="2016"
                   height="2690"
                   loading="lazy"
@@ -434,9 +435,7 @@ export default function Home() {
         <footer id="contact">
           <span className="hand">Have something in mind?</span>
           <h2>
-            Let’s make something
-            <br />
-            <em>thoughtful.</em> <span aria-hidden="true">✳</span>
+            Let’s build something
           </h2>
           <SiteLink className="cta" href="mailto:gurleenksamra@gmail.com">
             Say hello <span>↗</span>

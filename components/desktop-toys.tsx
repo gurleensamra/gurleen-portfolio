@@ -1,4 +1,5 @@
 'use client';
+import Asterisk from '@/components/asterisk';
 import { useState } from 'react';
 
 export default function DesktopToys() {
@@ -32,6 +33,6 @@ export default function DesktopToys() {
         <div><span aria-hidden="true">$ </span><input id="toy-command" value={command} onChange={e => setCommand(e.target.value)} placeholder="help" autoComplete="off" maxLength={80} /><button type="submit">↵ <span className="sr-only">Run command</span></button></div>
       </form>
     </div>
-    {party && <div className="toy-confetti" aria-hidden="true">{Array.from({ length: 24 }, (_, i) => <span key={i} style={{ left: `${i * 4.2}%`, animationDelay: `${i % 4 * .08}s` }}>{['✧', '♡', '✳'][i % 3]}</span>)}</div>}
+    {party && <div className="toy-confetti" aria-hidden="true">{Array.from({ length: 24 }, (_, i) => <span key={i} style={{ left: `${i * 4.2}%`, animationDelay: `${i % 4 * .08}s` }}>{['✧', '♡', <Asterisk key="star" />][i % 3]}</span>)}</div>}
   </section>;
 }
