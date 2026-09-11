@@ -2,6 +2,7 @@
 /* oxlint-disable next/no-html-link-for-pages */
 'use client';
 import SiteLink from '@/components/site-link';
+import DesktopToys from '@/components/desktop-toys';
 import { sitePath } from '@/lib/site-path';
 import { useId, useState, useSyncExternalStore } from 'react';
 import Image from '@/components/site-image';
@@ -148,9 +149,10 @@ export default function Home() {
               <svg className="stitched-bow" viewBox="0 0 180 110" fill="none" aria-hidden="true">
                 <path d="M90 49C15-21 5 26 28 54Q58 75 90 49C165-21 175 26 152 54Q122 75 90 49ZM83 49Q62 78 40 102M97 49Q118 78 140 102" stroke="currentColor" strokeWidth="5" strokeDasharray="2 6" strokeLinecap="square" />
               </svg>
-              <p className="hand cover-hello">hello, world. i’m</p>
-              <h1 className="cyber-name">Gurleen<span aria-hidden="true">✳</span></h1>
-              <p className="cover-description">Software, design & a little bit of wonder.</p>
+              <p className="hand cover-hello">hi, i’m</p>
+              <h1 className="cyber-name">gurleen<span aria-hidden="true">♡</span></h1>
+              <p className="cover-description">i write code, make things, and have too many tabs open.</p>
+              <p className="bio-line">Informatics at UW · SWE intern at NVIDIA</p>
               <div className="cover-links"><SiteLink href="#work" className="cta">Open my projects ↗</SiteLink><SiteLink href="/about" className="text-link">Meet the person ♡</SiteLink></div>
               <span className="page-number">01 / WELCOME TO MY CORNER OF THE INTERNET</span>
             </div>
@@ -180,14 +182,10 @@ export default function Home() {
               </b>
             </h1>
             <p className="hero-copy">
-              A curious mind, a builder’s heart,
-              <br />
-              and a soft spot for thoughtful design.
+              i write code, make things, and have too many tabs open.
             </p>
             <p className="bio-line">
-              I bring code and creativity together to make things
-              <br className="desktop-break" /> that feel intuitive, useful, and
-              a little more human.
+              Informatics at UW · SWE intern at NVIDIA
             </p>
             <SiteLink href="#work" className="cta">
               Explore my work <span>↓</span>
@@ -432,6 +430,7 @@ export default function Home() {
             </SiteLink>
           </div>
         </section>
+        <DesktopToys />
         <footer id="contact">
           <span className="hand">Have something in mind?</span>
           <h2>
