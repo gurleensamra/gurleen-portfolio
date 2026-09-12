@@ -95,7 +95,7 @@
 /* Small desktop interactions */
 .preview-trigger { margin:8px 0 14px; padding:9px 14px; border:1px solid var(--line); background:var(--pink); color:var(--ink); font:18px 'VT323',monospace; cursor:pointer; box-shadow:2px 2px 0 var(--line); }
 .preview-trigger:hover { transform:translate(-1px,-1px); }
-.project-preview { width:min(700px,92vw); max-height:90dvh; padding:0; border:1px solid #ad7c9c; border-radius:10px; background:#30202e; color:#fceaf6; box-shadow:0 20px 90px #170e2666; }
+.project-preview { position:fixed; inset:0; margin:auto; width:min(700px,92vw); max-height:90dvh; padding:0; border:1px solid #ad7c9c; border-radius:10px; background:#30202e; color:#fceaf6; box-shadow:0 20px 90px #170e2666; }
 .project-preview::backdrop { background:#221421aa; backdrop-filter:blur(5px); }
 .preview-content { padding:20px; }
 .preview-content header,.poster-viewer nav { display:flex; align-items:center; justify-content:space-between; gap:12px; font:14px monospace; }
