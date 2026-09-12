@@ -1,3 +1,4 @@
+import { sweGraphics } from '@/lib/swe-graphics';
 /* Native anchors intentionally avoid the deployed vinext Link navigation failure. */
 /* oxlint-disable next/no-html-link-for-pages */
 import SiteLink from '@/components/site-link';
@@ -85,19 +86,11 @@ export default async function Project({ params }: Props) {
       </div>
       {slug === 'swe-graphics-posters-branding' && (
         <section className="art-gallery" aria-label="SWE design collection">
-          {[
-            'Bracelets and Boba · September 2025',
-            'Graduate School Survival Kit · October 2025',
-            'General Meeting · February 2025',
-            'May 2025 Newsletter',
-            'April 2025 Newsletter',
-            'Executive-team polo · September 2025',
-            'Executive-team polo detail',
-          ].map((caption, i) => (
+          {sweGraphics.map(({ image, caption }) => (
             <figure key={caption}>
               <Image
                 unoptimized
-                src={`/images/swe-${i}.png`}
+                src={`/images/${image}`}
                 alt={caption}
                 width={1545}
                 height={2000}
