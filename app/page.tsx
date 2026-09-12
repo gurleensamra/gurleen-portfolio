@@ -254,7 +254,7 @@ export default function Home() {
               <p className="eyebrow">A FEW OPEN TABS</p>
               <h2 id="work-title">
                 Selected work
-                <span className="hand">made by me, for people</span>
+                <span className="hand">made by me!</span>
               </h2>
             </div>
             <span className="index-label">01 — 04 / SELECTED WORK</span>
