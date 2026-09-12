@@ -3,6 +3,7 @@
 'use client';
 import Asterisk from '@/components/asterisk';
 import SiteLink from '@/components/site-link';
+import ProjectPreview from '@/components/project-preview';
 import DesktopToys from '@/components/desktop-toys';
 import { sitePath } from '@/lib/site-path';
 import { useId, useState, useSyncExternalStore } from 'react';
@@ -159,11 +160,11 @@ export default function Home() {
             </div>
             <aside className="terminal-card" aria-label="A little introduction">
               <Chrome title="gurleen@desktop: ~" />
-              <div className="terminal-body"><p><span className="prompt-symbol">♥</span> cat about-me.txt</p><h2>Soft heart.<br />Technical mind.</h2><p className="terminal-description">Informatics @ UW<br />Software engineering<br />Human-centered design</p><div className="terminal-rule" /><p className="terminal-last">Let’s make something thoughtful.<span className="terminal-cursor" aria-hidden="true">▌</span></p></div>
+              <div className="terminal-body"><p><span className="prompt-symbol">♥</span> cat about-me.txt</p><h2>a bit about me</h2><p className="terminal-description">Informatics @ UW<br />Software engineering<br />Human-centered design</p><div className="terminal-rule" /><p className="terminal-last">Currently building.<span className="terminal-cursor" aria-hidden="true">▌</span></p></div>
               <span className="terminal-seal" aria-hidden="true">✧</span>
             </aside>
           </div>
-          <div className="cover-bottom"><span>DESIGNED TO FEEL HUMAN</span><SiteLink href="#meet-gurleen">SCROLL TO EXPLORE ↓</SiteLink><span>CODE + CURIOSITY</span></div>
+          <div className="cover-bottom"><span>WELCOME IN</span><SiteLink href="#meet-gurleen">SCROLL TO EXPLORE ↓</SiteLink><span>STAY A WHILE</span></div>
         </section>
         <section id="meet-gurleen" className="hero" aria-labelledby="intro">
           <div className="intro">
@@ -338,6 +339,7 @@ export default function Home() {
               <div className="small-project-copy">
                 <span className="eyebrow">SOFTWARE ENGINEERING · JAVA</span>
                 <h3>Mini-Git</h3>
+                <ProjectPreview kind="git" />
                 <p>
                   Understanding version control by building it: a simplified
                   system exploring commits, branches, and repositories.
@@ -367,7 +369,8 @@ export default function Home() {
               </SiteLink>
               <div className="small-project-copy">
                 <span className="eyebrow">VISUAL DESIGN · COMMUNITY</span>
-                <h3>Designing for connection</h3>
+                <h3>SWE visuals</h3>
+                <ProjectPreview kind="swe" />
                 <p>
                   Branding, event assets, and social graphics for the Society of
                   Women Engineers at UW. Making community feel inviting.
@@ -410,7 +413,7 @@ export default function Home() {
             <figcaption className="hand">Gurleen Kaur Samra</figcaption>
           </figure>
           <div className="about-copy">
-            <p className="eyebrow">THE PERSON BEHIND THE PIXELS</p>
+            <p className="eyebrow">A LITTLE ABOUT ME</p>
             <h2>
               Equal parts
               <br />
@@ -442,7 +445,7 @@ export default function Home() {
           </SiteLink>
           <div className="footer-bottom">
             <span>© {new Date().getFullYear()} Gurleen Kaur Samra</span>
-            <span>Made with code, care & curiosity.</span>
+            <span>Thanks for stopping by.</span>
             <SiteLink
               href="https://www.linkedin.com/in/gurleen-kaur-samra"
               target="_blank"
