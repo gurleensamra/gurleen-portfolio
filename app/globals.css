@@ -729,10 +729,10 @@ dd {
   padding: 24px;
 }
 .git {
-  background: #dce8e8;
+  background: #493342;
 }
 .swe {
-  background: #f0dfd5;
+  background: #493342;
 }
 .project-pair img {
   height: 100%;
@@ -1106,7 +1106,7 @@ footer h2 span {
   max-width: 740px;
 }
 .story-cover {
-  background: var(--blue);
+  background: #493342;
 }
 .story-cover > img {
   width: 100%;
