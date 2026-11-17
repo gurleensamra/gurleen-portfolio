@@ -211,3 +211,17 @@
 @media(max-width:600px) {
   .portfolio .work-section { padding-inline:8px; }
 }
+
+/* Share one inset across all four selected projects. */
+.portfolio { --work-inset:clamp(20px,4vw,96px); }
+.portfolio .work-section { padding-inline:var(--work-inset); }
+.portfolio .notion-construction { margin-inline:var(--work-inset); }
+.portfolio .about-section { padding-inline:clamp(32px,6vw,144px); }
+.about-copy-art { width:clamp(180px,19vw,300px); margin-inline:auto; }
+.about-copy-art-top { margin-bottom:clamp(24px,3vw,48px); }
+.about-copy-art-bottom { margin-top:clamp(28px,3vw,48px); }
+@media(max-width:740px) {
+  .portfolio { --work-inset:12px; }
+  .portfolio .about-section { padding-inline:20px; }
+  .about-copy-art { width:190px; }
+}

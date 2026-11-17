@@ -412,7 +412,6 @@ export default function Home() {
           </div>
         </article>
         <section id="about" className="about-section">
-          <StitchTrim variant="bow" className="home-about-trim" />
           <FlowerSticker className="flower-orchid flower-about" />
           <figure className="about-note">
             <Image
@@ -429,6 +428,7 @@ export default function Home() {
             <figcaption className="hand">Gurleen Kaur Samra</figcaption>
           </figure>
           <div className="about-copy">
+            <StitchTrim variant="bow" className="about-copy-art about-copy-art-top" />
             <p className="eyebrow">A LITTLE ABOUT ME</p>
             <h2>
               Equal parts
@@ -448,6 +448,7 @@ export default function Home() {
             <SiteLink href="/about" className="text-link">
               A little more about me ↗
             </SiteLink>
+            <StitchTrim variant="hearts" className="about-copy-art about-copy-art-bottom" />
           </div>
         </section>
         <StitchTrim variant="stars" className="section-stitch-divider" />
