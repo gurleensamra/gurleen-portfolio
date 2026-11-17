@@ -4,7 +4,7 @@ export const projects = {
     category: 'SOFTWARE ENGINEERING / JAVA',
     subtitle:
       'Understanding version control by building it from the inside out.',
-    image: 'butterfly-stitch.svg',
+    image: 'rabbit-cover.svg',
     alt: 'Mini-Git project artwork',
     context: 'Data Structures & Algorithms · University of Washington',
     tools: 'Java · Linked lists · File I/O',
@@ -43,7 +43,7 @@ export const projects = {
     category: 'VISUAL DESIGN / SOCIETY OF WOMEN ENGINEERS',
     subtitle:
       'A visual invitation to show up, meet people, and be part of SWE.',
-    image: 'heart-stitch.svg',
+    image: 'hearts-cover.svg',
     alt: 'SWE event artwork',
     context: 'Society of Women Engineers · University of Washington',
     tools: 'Canva · CustomInk',
