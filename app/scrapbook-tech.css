@@ -225,3 +225,16 @@
   .portfolio .about-section { padding-inline:20px; }
   .about-copy-art { width:190px; }
 }
+
+/* One thread palette and a lighter, single-motif ornament style. */
+.portfolio { --thread:#a55a83; }
+.portfolio.night { --thread:#d9a4cb; }
+.portfolio .stitch-trim { color:var(--thread); }
+.portfolio .window-status > span { color:var(--thread); }
+.portfolio .profile-window::before { display:none; }
+.intro-side-stitch { position:absolute; right:0; bottom:22px; width:170px; transform:rotate(-8deg); opacity:.8; }
+.portfolio .about-copy-art { width:clamp(220px,23vw,340px); }
+.portfolio .about-copy-art-top { margin-bottom:28px; }
+.portfolio .about-copy-art-bottom { margin-top:32px; }
+.portfolio .section-stitch-divider { width:200px; opacity:.65; }
+@media(max-width:740px) { .intro-side-stitch { width:120px; bottom:8px; } }
