@@ -93,5 +93,5 @@ export default function Info464(){
  <div className="vsd-interlude"><span>CONNECTION</span><span aria-hidden="true">↔</span><span>CONTROL</span><p>Different artifacts. A shared question: whose values does a design make room for?</p></div>
  <CaseStudy text={'# 02. Designing My Digital Identity'+web} kind="web"/>
  <section id="reflection" className="vsd-reflection">{prose('# Final Reflection'+reflection)}</section>
- <footer className="vsd-footer"><span>GKS / INFO 464 / DESIGNED AROUND PEOPLE</span><p>Unlisted, not private: anyone with the URL can view this page. It is excluded from public navigation and marked noindex.</p><p className="vsd-print-hint">To save a PDF: Print → Save as PDF. The print layout includes both case studies, diagrams, and original artwork.</p></footer></div></main>;
+ <footer className="vsd-footer"><span>GKS / INFO 464 / DESIGNED AROUND PEOPLE</span></footer></div></main>;
 }
