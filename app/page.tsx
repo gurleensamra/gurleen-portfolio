@@ -395,7 +395,6 @@ export default function Home() {
         </article>
         <section id="about" className="about-section">
           <GothicFlourish variant="sweep" className="about-flourish-top" />
-          <GothicFlourish variant="diamond" className="about-flourish-bottom" />
           <FlowerSticker className="flower-orchid flower-about" />
           <figure className="about-note">
             <Image
@@ -438,7 +437,6 @@ export default function Home() {
 
         <DesktopToys />
         <footer id="contact">
-          <GothicFlourish variant="wave" className="footer-flourish" />
           <span className="hand">Have something in mind?</span>
           <h2>
             lets build it!

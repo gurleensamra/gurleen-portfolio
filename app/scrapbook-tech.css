@@ -254,7 +254,7 @@
 .portfolio .about-section,.portfolio footer { position:relative; isolation:isolate; }
 .gothic-flourish { display:block; height:auto; color:#965477; pointer-events:none; }
 .portfolio .about-section > .gothic-flourish,.portfolio .footer-flourish { position:absolute; z-index:-1; max-width:none; margin:0; opacity:.16; }
-.portfolio .about-flourish-top { width:95%; left:-4%; top:0; transform:rotate(-7deg); }
+.portfolio .about-flourish-top { width:95%; left:-4%; top:0; transform:scaleX(-1) rotate(-7deg); }
 .portfolio .about-flourish-bottom { width:88%; right:-3%; bottom:0; transform:scaleX(-1) rotate(-5deg); }
 .portfolio .footer-flourish { width:100%; left:0; top:50%; transform:translateY(-50%); }
 .portfolio.night .gothic-flourish { color:#d6a2c8; opacity:.14; }
@@ -262,4 +262,17 @@
   .portfolio .about-flourish-top { width:120%; left:-10%; top:10px; }
   .portfolio .about-flourish-bottom { width:120%; right:-10%; bottom:15px; }
   .portfolio .footer-flourish { width:140%; left:-20%; }
+}
+
+/* Give the introduction window a little more presence without scaling overflow. */
+@media(min-width:741px) {
+  .portfolio .hero { grid-template-columns:minmax(0,1fr) minmax(0,1.12fr); }
+}
+.portfolio .profile-inner { min-height:300px; padding:clamp(28px,3vw,52px); }
+.portfolio .mini-bio p { font-size:clamp(28px,2.6vw,42px); }
+.portfolio .mini-bio em { font-size:.9em; }
+.portfolio .window-status { white-space:normal; overflow-wrap:anywhere; }
+@media(max-width:740px) {
+  .portfolio .profile-inner { min-height:260px; padding:28px 22px; }
+  .portfolio .mini-bio p { font-size:30px; }
 }
