@@ -205,3 +205,9 @@
   .home-about-trim { width:120px; top:-35px; }
   .about-top-trim { width:180px; }
 }
+
+/* Inset Selected Work from the page edges. */
+.portfolio .work-section { padding-inline:clamp(12px,2.5vw,60px); }
+@media(max-width:600px) {
+  .portfolio .work-section { padding-inline:8px; }
+}
