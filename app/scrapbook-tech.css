@@ -168,3 +168,40 @@
   .portfolio .terminal-body { padding:clamp(27px,3vw,64px); }
   .portfolio .terminal-body h2 { font-size:clamp(36px,3vw,64px); }
 }
+
+/* Give the introduction its own scrapbook margins. */
+.portfolio .hero { position:relative; padding-inline:clamp(28px,5vw,120px); }
+.margin-doodle { position:absolute; width:clamp(26px,3vw,58px); height:auto; color:#a65885; pointer-events:none; opacity:.75; }
+.margin-doodle-left { left:0; top:27%; transform:rotate(-9deg); }
+.margin-doodle-right { right:0; top:38%; transform:rotate(9deg); }
+.night .margin-doodle { color:#e6a5ce; }
+@media(max-width:960px) {
+  .portfolio .hero { padding-inline:24px; }
+  .margin-doodle { width:24px; opacity:.5; }
+  .margin-doodle-left { left:-7px; }
+  .margin-doodle-right { right:-7px; }
+}
+@media(max-width:480px) {
+  .portfolio .hero { padding-inline:8px; }
+  .margin-doodle { width:22px; top:18px; }
+  .margin-doodle-right { display:none; }
+}
+
+.stitch-trim { display:block; width:min(100%,300px); height:auto; color:#a65885; pointer-events:none; }
+.night .stitch-trim { color:#e6a5ce; }
+.about-top-trim { margin:0 auto 24px; width:240px; }
+.about-bottom-trim,.section-stitch-divider { margin:24px auto 40px; }
+.portfolio .about-detail { gap:clamp(28px,5vw,100px); padding:24px clamp(16px,4vw,80px) 40px; align-items:center; }
+.portfolio .about-detail .polaroid { max-width:480px; justify-self:center; }
+.about-detail .polaroid .stitch-trim { margin:14px auto 0; width:180px; }
+.about-paper { position:relative; padding:clamp(24px,3vw,52px); background:var(--paper); border:1px dashed var(--line); box-shadow:7px 8px 0 #8d517c12; }
+.about-paper p { max-width:65ch; }
+.about-paper > .stitch-trim { width:180px; margin:24px 0 12px; }
+.portfolio .about-section { position:relative; padding-inline:clamp(24px,5vw,100px); gap:clamp(32px,5vw,100px); }
+.home-about-trim { position:absolute; right:5%; top:-20px; width:200px; transform:rotate(5deg); }
+@media(max-width:740px) {
+  .portfolio .about-detail { grid-template-columns:1fr; padding-inline:0; }
+  .portfolio .about-section { padding-inline:8px; }
+  .home-about-trim { width:120px; top:-35px; }
+  .about-top-trim { width:180px; }
+}

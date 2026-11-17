@@ -1,6 +1,7 @@
 /* Native anchors intentionally avoid the deployed vinext Link navigation failure. */
 /* oxlint-disable next/no-html-link-for-pages */
 'use client';
+import StitchTrim from '@/components/stitch-trim';
 import Asterisk from '@/components/asterisk';
 import SiteLink from '@/components/site-link';
 import ProjectPreview from '@/components/project-preview';
@@ -167,6 +168,20 @@ export default function Home() {
           <div className="cover-bottom"><span>WELCOME IN</span><SiteLink href="#meet-gurleen">SCROLL TO EXPLORE ↓</SiteLink><span>STAY A WHILE</span></div>
         </section>
         <section id="meet-gurleen" className="hero" aria-labelledby="intro">
+          <svg className="margin-doodle margin-doodle-left" viewBox="0 0 80 240" fill="none" aria-hidden="true">
+            <g stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeDasharray="2 4">
+              <path d="M40 30C18 8 1 35 40 63C79 35 62 8 40 30Z" />
+              <path d="M40 105L46 128L68 134L46 140L40 163L34 140L12 134L34 128Z" />
+              <path d="M27 196L33 202M33 196L27 202M49 214L55 220M55 214L49 220" />
+            </g>
+          </svg>
+          <svg className="margin-doodle margin-doodle-right" viewBox="0 0 80 240" fill="none" aria-hidden="true">
+            <g stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeDasharray="2 4">
+              <path d="M40 16L46 39L68 45L46 51L40 74L34 51L12 45L34 39Z" />
+              <path d="M40 124C18 102 1 129 40 157C79 129 62 102 40 124Z" />
+              <path d="M25 195L31 201M31 195L25 201M49 215L55 221M55 215L49 221" />
+            </g>
+          </svg>
           <div className="intro">
             <p className="eyebrow">
               SOFTWARE ENGINEERING + HUMAN-CENTERED DESIGN
@@ -397,6 +412,7 @@ export default function Home() {
           </div>
         </article>
         <section id="about" className="about-section">
+          <StitchTrim variant="bow" className="home-about-trim" />
           <FlowerSticker className="flower-orchid flower-about" />
           <figure className="about-note">
             <Image
@@ -434,6 +450,7 @@ export default function Home() {
             </SiteLink>
           </div>
         </section>
+        <StitchTrim variant="stars" className="section-stitch-divider" />
         <DesktopToys />
         <footer id="contact">
           <span className="hand">Have something in mind?</span>
