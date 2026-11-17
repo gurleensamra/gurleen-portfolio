@@ -117,3 +117,46 @@
 .portfolio { transition:background-color .4s,color .4s; }
 @media (hover:none) { .portfolio .project-image::after { opacity:1; } }
 @media (prefers-reduced-motion:reduce) { .portfolio,.portfolio .project-image img,.portfolio .project-image::after { transition:none; } .portfolio .project-image:hover img,.preview-trigger:hover { transform:none; } }
+
+/* Keep the desktop composition bounded on wide and tall displays. */
+.portfolio main { width:100%; max-width:1184px; padding-inline:clamp(20px,3vw,40px); }
+.portfolio .nav { width:100%; max-width:1256px; }
+.portfolio .scrapbook-cover { min-height:0; gap:clamp(24px,4vh,48px); padding-block:20px 32px; }
+.portfolio .cyber-cover-grid { grid-template-columns:minmax(0,1.4fr) minmax(0,1fr); gap:clamp(24px,3vw,45px); padding-block:28px 38px; }
+.portfolio .name-page,.portfolio .terminal-card { min-width:0; }
+.portfolio .name-page { padding:clamp(28px,3vw,42px) clamp(22px,2.5vw,32px) 30px; }
+.portfolio .cyber-name { font-size:clamp(58px,6.4vw,92px); letter-spacing:-.055em; }
+.portfolio .cover-description { max-width:32ch; }
+.portfolio .terminal-body { padding:clamp(20px,2.3vw,27px); overflow-wrap:anywhere; }
+.portfolio .terminal-body h2 { font-size:clamp(27px,2.6vw,36px); }
+.portfolio .cover-rail,.portfolio .cover-bottom { flex-wrap:wrap; }
+.portfolio .project-pair > *,.portfolio .hero > *,.portfolio .about-section > * { min-width:0; }
+.portfolio .story-cover > img { height:auto; max-height:460px; aspect-ratio:16/9; }
+@media(min-width:741px) and (max-width:960px) {
+  .portfolio .cyber-cover-grid { gap:24px; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); }
+  .portfolio .cyber-name { font-size:clamp(52px,7vw,68px); }
+  .portfolio .name-page { padding-inline:22px; }
+  .portfolio .cover-hello { font-size:20px; }
+  .portfolio .stitched-bow { width:75px; }
+}
+@media(max-width:740px) {
+  .portfolio .cyber-cover-grid { grid-template-columns:minmax(0,1fr); gap:48px; padding:20px 4px 30px; }
+  .portfolio .name-page { transform:rotate(-1deg); padding:36px 24px 28px; }
+  .portfolio .terminal-card { transform:rotate(1deg); }
+  .portfolio .cyber-name { font-size:clamp(54px,13vw,88px); }
+  .portfolio .terminal-body h2 { font-size:32px; }
+  .portfolio .cover-bottom { font-size:9px; gap:12px; }
+  .portfolio .cover-rail { font-size:9px; }
+  .portfolio .nav { gap:12px; padding-inline:20px; }
+  .portfolio .nav nav { flex-wrap:wrap; gap:12px; }
+  .portfolio .story-cover > img { padding:12px; }
+}
+@media(max-width:380px) {
+  .portfolio main { padding-inline:16px; }
+  .portfolio .name-page { padding-inline:18px; }
+  .portfolio .cyber-name { font-size:50px; }
+  .portfolio .file-tab { font-size:9px; left:10px; padding-inline:9px; }
+  .portfolio .cover-links .cta { font-size:12px; padding-inline:15px; }
+}
+/* Decorative rotations may extend past the paper without widening the page. */
+.portfolio.portfolio { overflow-x:clip; }
