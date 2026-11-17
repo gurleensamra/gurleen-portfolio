@@ -15,7 +15,7 @@ export default function About() {
           Software engineering, user experience, and room to experiment.
         </p>
       </header>
-      <StitchTrim variant="bow" className="about-top-trim" />
+      <StitchTrim variant="butterfly" className="about-top-trim" />
       <section className="about-detail">
         <figure className="polaroid">
           <Image

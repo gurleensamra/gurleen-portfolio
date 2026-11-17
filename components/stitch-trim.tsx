@@ -1,23 +1,25 @@
-/** Small ribbon ornaments in the portfolio's thread palette. */
-export default function StitchTrim({ variant = 'hearts', className = '' }: { variant?: 'hearts' | 'stars' | 'bow'; className?: string }) {
-  return <svg className={`stitch-trim ${className}`} viewBox="0 0 300 110" fill="none" aria-hidden="true">
-    <g stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      {variant === 'bow' ? <>
-        <path d="M146 44C125 25 102 8 91 22C77 40 104 62 144 49M154 44C174 22 197 9 208 23C220 42 192 63 156 49" fill="currentColor" fillOpacity=".09" />
-        <path d="M144 50C136 62 132 79 113 91L127 88L130 100C144 85 142 67 149 53M156 50C164 65 159 87 182 100L178 86L193 91C174 74 170 59 157 49" fill="currentColor" fillOpacity=".09" />
-        <path d="M144 42Q150 38 157 43L157 52Q151 57 144 52Z" fill="currentColor" fillOpacity=".2" />
-        <path d="M99 27Q112 27 135 43M201 28Q186 28 165 44M147 57Q139 78 133 87M160 60Q166 81 174 86" strokeWidth=".8" opacity=".65" />
-        <path d="M64 31Q59 39 65 47M235 46Q242 37 237 31" strokeDasharray="1 4" />
-      </> : variant === 'hearts' ? <>
-        <path d="M150 84C134 71 111 54 119 37C125 23 142 29 150 40C160 25 177 26 183 39C191 58 167 74 150 84Z" fill="currentColor" fillOpacity=".08" />
-        <path d="M127 39Q123 46 128 53M151 90Q156 89 159 85" strokeWidth="1" />
-        <path d="M75 57C65 48 56 40 61 34C66 29 72 32 75 36C80 29 87 30 90 36C94 44 83 52 75 57ZM224 71C214 62 205 54 210 48C215 43 221 46 224 50C229 43 236 44 239 50C243 58 232 66 224 71Z" strokeWidth="1.2" />
-        <path d="M96 61Q103 68 109 65M189 70Q197 77 205 73" strokeDasharray="1 5" />
-      </> : <>
-        <path d="M150 21Q153 48 171 54Q153 58 150 86Q147 59 129 54Q147 49 150 21Z" fill="currentColor" fillOpacity=".12" />
-        <path d="M104 40Q106 50 114 52Q106 54 104 64Q102 54 94 52Q102 50 104 40ZM198 59Q200 69 208 71Q200 73 198 83Q196 73 188 71Q196 69 198 59Z" strokeWidth="1.2" />
-      </>}
-      <path d="M42 72l3 3m0-3l-3 3M254 29l3 3m0-3l-3 3" strokeWidth="1.2" />
+/** Original pixel patches with stitched edges and printed ephemera. */
+export default function StitchTrim({ variant = 'hearts', className = '' }: { variant?: 'hearts' | 'stars' | 'butterfly'; className?: string }) {
+  const pixels = variant === 'hearts'
+    ? ['01100110','11111111','11111111','01111110','00111100','00011000']
+    : variant === 'butterfly'
+    ? ['1100000011','1110110111','1111111111','0111111110','0011111100','0110110110','1100110011','1000110001']
+    : ['0001000','0011100','1111111','0111110','0011100','0100010'];
+  return <svg className={`stitch-trim ${className}`} viewBox="0 0 320 128" fill="none" aria-hidden="true">
+    <g transform="translate(15 12) rotate(-5 56 50)">
+      <path d="M0 8L12 0H112V94L101 103H0Z" fill="var(--patch-paper, #dfc5e5)" stroke="currentColor" />
+      <path d="M8 13V94H102V9H16" stroke="currentColor" strokeDasharray="2 4" />
+      <g stroke="currentColor" strokeWidth="1.5">
+        {pixels.flatMap((row, y) => [...row].map((pixel, x) => pixel === '1' ? <path key={`${x}-${y}`} d={`M${23+x*6} ${23+y*6}l3 3m0-3l-3 3`} /> : null))}
+      </g>
+      <path d="M20 86H40M46 86H49M55 86H90" stroke="currentColor" />
     </g>
+    <g transform="translate(116 45) rotate(3)">
+      <path d="M0 0H181V62H0V40L5 36L0 32Z" fill="var(--patch-ink, #412b3d)" />
+      <path d="M7 7H174V55H7Z" stroke="#efbad3" strokeDasharray="2 4" strokeWidth=".8" />
+      <text x="16" y="24" fill="#f7d9eb" fontFamily="monospace" fontSize="10" letterSpacing="1">{variant === 'butterfly' ? 'PERSONAL FILES / 01' : variant === 'hearts' ? 'HANDMADE / GKS' : 'END OF FILE _'}</text>
+      <g stroke="#dfc5e5">{[0,3,8,11,17,22,25,31,38,41,47,52,58,63,66,74,79,85,91,94,101,108,113,119,125,130,138].map((x,i) => <path key={x} d={`M${16+x} 34v13`} strokeWidth={i%3===0?2:1} />)}</g>
+    </g>
+    <path d="M119 16l6 6m0-6l-6 6M275 18l5 5m0-5l-5 5" stroke="currentColor" strokeWidth="1.5" />
   </svg>;
 }

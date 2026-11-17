@@ -149,9 +149,7 @@ export default function Home() {
               <LaceOrnament variant="corner" />
               <LaceOrnament variant="flourish" />
               <span className="file-tab">index / a work in progress</span>
-              <svg className="stitched-bow" viewBox="0 0 180 110" fill="none" aria-hidden="true">
-                <path d="M90 49C15-21 5 26 28 54Q58 75 90 49C165-21 175 26 152 54Q122 75 90 49ZM83 49Q62 78 40 102M97 49Q118 78 140 102" stroke="currentColor" strokeWidth="5" strokeDasharray="2 6" strokeLinecap="square" />
-              </svg>
+              <StitchTrim variant="stars" className="cover-patch" />
               <p className="hand cover-hello">hello, world. i’m</p>
               <h1 className="cyber-name">Gurleen<span aria-hidden="true"><Asterisk /></span></h1>
               <p className="cover-description">Software, design & a little bit of whimsy.</p>
@@ -168,7 +166,7 @@ export default function Home() {
           <div className="cover-bottom"><span>WELCOME IN</span><SiteLink href="#meet-gurleen">SCROLL TO EXPLORE ↓</SiteLink><span>STAY A WHILE</span></div>
         </section>
         <section id="meet-gurleen" className="hero" aria-labelledby="intro">
-          <StitchTrim variant="bow" className="intro-side-stitch" />
+          <StitchTrim variant="butterfly" className="intro-side-stitch" />
           <div className="intro">
             <p className="eyebrow">
               SOFTWARE ENGINEERING + HUMAN-CENTERED DESIGN
@@ -412,7 +410,7 @@ export default function Home() {
             <figcaption className="hand">Gurleen Kaur Samra</figcaption>
           </figure>
           <div className="about-copy">
-            <StitchTrim variant="bow" className="about-copy-art about-copy-art-top" />
+            <StitchTrim variant="butterfly" className="about-copy-art about-copy-art-top" />
             <p className="eyebrow">A LITTLE ABOUT ME</p>
             <h2>
               Equal parts
