@@ -2,7 +2,7 @@
 
 Branch: codex/info464-vsd-portfolio
 Route: /info464
-Status: local review only; not pushed or deployed.
+Status: review branch; not merged or deployed.
 
 ## Source and scope
 
@@ -20,7 +20,7 @@ All case-study prose comes from the supplied Designed Around People text. Origin
 
 ## Isolation
 
-Only app/info464 and public/info464-assets are added. No existing page, navigation, layout or sitemap files changed. No sitemap exists in this checkout; none is added. Page robots metadata is noindex, nofollow. Unlisted is not access control.
+The initial class page was isolated to app/info464 and public/info464-assets. Subsequent user-approved changes add shared cross-stitch background decorations to the homepage and class page, and replace Mini Git/SWE covers with rabbit/overlapping-heart motifs. Public navigation, root layout and sitemap are unchanged. No sitemap exists in this checkout; none is added. Page robots metadata is noindex, nofollow. Unlisted is not access control.
 
 ## Validation
 

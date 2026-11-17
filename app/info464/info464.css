@@ -4,3 +4,19 @@
 @media print{@page{size:A4;margin:15mm}.vsd-page{padding:0;background:white!important;color:#211c21;font-size:10pt;line-height:1.5;overflow:visible}.vsd-shell{max-width:none}.vsd-hero{box-shadow:none;padding:20px;margin-bottom:24px}.vsd-hero h1{font-size:49pt}.vsd-hero nav,.vsd-skip,.vsd-print-hint{display:none}.vsd-sticker{font-size:15pt;top:80px;right:20px}.vsd-intro{margin-bottom:25px}.vsd-case{break-before:page;box-shadow:none;border:0}.vsd-case-body{padding:20px 0}.vsd-section{margin-bottom:24px}.vsd-page h2{font-size:24pt}.vsd-page h3{font-size:18pt;break-after:avoid}.vsd-page h4{break-after:avoid}.vsd-page p{orphans:3;widows:3}.vsd-diagram{padding:15px;break-inside:avoid}.vsd-nodes{grid-template-columns:repeat(2,1fr)}.vsd-three{grid-template-columns:repeat(3,1fr)}.vsd-scenarios{grid-template-columns:1fr 1fr}.vsd-zine{transform:none;max-width:105mm;box-shadow:none;break-inside:avoid}.vsd-shot img{max-height:135mm;object-fit:contain}.vsd-shot{break-inside:avoid}.vsd-reflection{break-before:page;margin:0;padding:22px}.vsd-windowbar{print-color-adjust:exact;-webkit-print-color-adjust:exact}.vsd-interlude{padding:25px}.vsd-footer{font-size:8pt}.vsd-page a{text-decoration:none}.vsd-note{transform:none}.vsd-status{font-size:7pt}}
 
 @media print { .vsd-page { font-size:9.5pt; line-height:1.45; } .vsd-page p { margin:7px 0 11px; } .vsd-section { margin-bottom:18px; } .vsd-page h3 { padding-top:18px; margin-bottom:14px; } .vsd-page h4 { margin-top:16px; } .vsd-diagram { margin:20px 0; } .vsd-interlude { display:none; } }
+
+/* Decorations belong to the graph-paper canvas, beneath the opaque windows. */
+.vsd-page { position:relative; isolation:isolate; }
+.vsd-shell { position:relative; z-index:1; }
+.vsd-graph-art { position:absolute; inset:0; z-index:0; pointer-events:none; }
+.vsd-page .vsd-graph-art .background-stitch { z-index:0; opacity:.32; width:clamp(160px,18vw,300px); }
+.vsd-graph-art .graph-bow-one { left:-2%; top:650px; transform:rotate(-14deg); }
+.vsd-graph-art .graph-note-one { right:-1%; top:11%; transform:rotate(12deg); }
+.vsd-graph-art .graph-butterfly-one { left:-2%; top:24%; transform:rotate(-12deg); }
+.vsd-page .vsd-graph-art .graph-swirl-one { width:75%; left:12%; top:43%; transform:rotate(-5deg); }
+.vsd-graph-art .graph-bow-two { right:-2%; top:55%; transform:rotate(16deg); }
+.vsd-graph-art .graph-note-two { left:-1%; top:69%; transform:rotate(-14deg); }
+.vsd-graph-art .graph-butterfly-two { right:-2%; top:82%; transform:rotate(10deg); }
+.vsd-page .vsd-graph-art .graph-swirl-two { width:78%; left:8%; top:95%; transform:scaleX(-1) rotate(4deg); }
+@media(max-width:760px) { .vsd-page .vsd-graph-art .background-stitch { width:180px; opacity:.25; } .vsd-shell { padding-inline:8px; } .vsd-graph-art .graph-bow-one { top:620px; } }
+@media print { .vsd-graph-art { display:none; } }

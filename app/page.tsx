@@ -1,7 +1,7 @@
 /* Native anchors intentionally avoid the deployed vinext Link navigation failure. */
 /* oxlint-disable next/no-html-link-for-pages */
 'use client';
-import GothicFlourish from '@/components/gothic-flourish';
+import BackgroundStitch from '@/components/background-stitch';
 import Asterisk from '@/components/asterisk';
 import SiteLink from '@/components/site-link';
 import ProjectPreview from '@/components/project-preview';
@@ -166,6 +166,8 @@ export default function Home() {
           <div className="cover-bottom"><span>WELCOME IN</span><SiteLink href="#meet-gurleen">SCROLL TO EXPLORE ↓</SiteLink><span>STAY A WHILE</span></div>
         </section>
         <section id="meet-gurleen" className="hero" aria-labelledby="intro">
+          <BackgroundStitch motif="bow" className="home-bow" />
+          <BackgroundStitch motif="note" className="home-note" />
 
           <div className="intro">
             <p className="eyebrow">
@@ -326,8 +328,8 @@ export default function Home() {
               >
                 <Image
                   unoptimized
-                  src="/images/butterfly-stitch.svg"
-                  alt="Lilac cross-stitch butterfly on plum graph paper"
+                  src="/images/rabbit-cover.svg"
+                  alt="Lilac cross-stitch rabbit on plum graph paper"
                   width="1245"
                   height="1245"
                   loading="lazy"
@@ -357,8 +359,8 @@ export default function Home() {
               >
                 <Image
                   unoptimized
-                  src="/images/heart-stitch.svg"
-                  alt="Lilac cross-stitch heart on plum graph paper"
+                  src="/images/hearts-cover.svg"
+                  alt="Overlapping lilac cross-stitch hearts on plum graph paper"
                   width="2016"
                   height="2690"
                   loading="lazy"
@@ -382,6 +384,7 @@ export default function Home() {
             </article>
           </div>
         </section>
+        <BackgroundStitch motif="note" className="home-work-note" />
         <article className="project-window notion-construction">
           <Chrome title="04 / canvas-to-notion / in-progress" />
           <div className="small-project-copy">
@@ -394,7 +397,8 @@ export default function Home() {
           </div>
         </article>
         <section id="about" className="about-section">
-          <GothicFlourish variant="sweep" className="about-flourish-top" />
+          <BackgroundStitch motif="butterfly" className="home-butterfly" />
+          <BackgroundStitch motif="sweep" className="about-flourish-top" />
           <FlowerSticker className="flower-orchid flower-about" />
           <figure className="about-note">
             <Image
@@ -437,6 +441,7 @@ export default function Home() {
 
         <DesktopToys />
         <footer id="contact">
+          <BackgroundStitch motif="bow" className="home-footer-bow" />
           <span className="hand">Have something in mind?</span>
           <h2>
             lets build it!
