@@ -249,3 +249,11 @@
 .portfolio .intro-side-stitch { width:180px; opacity:1; }
 .portfolio .section-stitch-divider { width:210px; opacity:1; }
 @media(max-width:740px) { .cover-patch { width:110px!important; top:16px; right:12px; } .portfolio .intro-side-stitch { width:130px; } }
+
+/* Gothic scrollwork sits in the open space around the About copy. */
+.gothic-flourish { display:block; width:100%; height:auto; color:#965477; opacity:.42; pointer-events:none; }
+.night .gothic-flourish { color:#d6a2c8; opacity:.4; }
+.about-flourish-top { margin:0 auto clamp(24px,3vw,48px); max-width:780px; }
+.about-flourish-bottom { margin:clamp(28px,3vw,48px) auto 0; max-width:680px; }
+.footer-flourish { width:min(84%,1000px); margin:0 auto 34px; }
+@media(max-width:740px) { .gothic-flourish { opacity:.5; } .about-flourish-top { margin-bottom:24px; } .about-flourish-bottom { margin-top:28px; } .footer-flourish { width:94%; margin-bottom:24px; } }

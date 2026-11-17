@@ -1,7 +1,7 @@
 /* Native anchors intentionally avoid the deployed vinext Link navigation failure. */
 /* oxlint-disable next/no-html-link-for-pages */
 'use client';
-import StitchTrim from '@/components/stitch-trim';
+import GothicFlourish from '@/components/gothic-flourish';
 import Asterisk from '@/components/asterisk';
 import SiteLink from '@/components/site-link';
 import ProjectPreview from '@/components/project-preview';
@@ -149,7 +149,7 @@ export default function Home() {
               <LaceOrnament variant="corner" />
               <LaceOrnament variant="flourish" />
               <span className="file-tab">index / a work in progress</span>
-              <StitchTrim variant="stars" className="cover-patch" />
+
               <p className="hand cover-hello">hello, world. i’m</p>
               <h1 className="cyber-name">Gurleen<span aria-hidden="true"><Asterisk /></span></h1>
               <p className="cover-description">Software, design & a little bit of whimsy.</p>
@@ -166,7 +166,7 @@ export default function Home() {
           <div className="cover-bottom"><span>WELCOME IN</span><SiteLink href="#meet-gurleen">SCROLL TO EXPLORE ↓</SiteLink><span>STAY A WHILE</span></div>
         </section>
         <section id="meet-gurleen" className="hero" aria-labelledby="intro">
-          <StitchTrim variant="butterfly" className="intro-side-stitch" />
+
           <div className="intro">
             <p className="eyebrow">
               SOFTWARE ENGINEERING + HUMAN-CENTERED DESIGN
@@ -410,7 +410,8 @@ export default function Home() {
             <figcaption className="hand">Gurleen Kaur Samra</figcaption>
           </figure>
           <div className="about-copy">
-            <StitchTrim variant="butterfly" className="about-copy-art about-copy-art-top" />
+            <GothicFlourish variant="sweep" className="about-flourish-top" />
+
             <p className="eyebrow">A LITTLE ABOUT ME</p>
             <h2>
               Equal parts
@@ -430,12 +431,14 @@ export default function Home() {
             <SiteLink href="/about" className="text-link">
               A little more about me ↗
             </SiteLink>
-            <StitchTrim variant="hearts" className="about-copy-art about-copy-art-bottom" />
+            <GothicFlourish variant="diamond" className="about-flourish-bottom" />
+
           </div>
         </section>
-        <StitchTrim variant="stars" className="section-stitch-divider" />
+
         <DesktopToys />
         <footer id="contact">
+          <GothicFlourish variant="wave" className="footer-flourish" />
           <span className="hand">Have something in mind?</span>
           <h2>
             lets build it!

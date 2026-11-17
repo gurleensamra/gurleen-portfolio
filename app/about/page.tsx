@@ -1,4 +1,3 @@
-import StitchTrim from '@/components/stitch-trim';
 /* Native anchors intentionally avoid the deployed vinext Link navigation failure. */
 /* oxlint-disable next/no-html-link-for-pages */
 import SiteLink from '@/components/site-link';
@@ -15,7 +14,7 @@ export default function About() {
           Software engineering, user experience, and room to experiment.
         </p>
       </header>
-      <StitchTrim variant="butterfly" className="about-top-trim" />
+
       <section className="about-detail">
         <figure className="polaroid">
           <Image
@@ -26,7 +25,7 @@ export default function About() {
             height={6000}
           />
           <figcaption className="hand">hi again ♡</figcaption>
-          <StitchTrim variant="hearts" />
+
         </figure>
         <div className="about-paper">
           <h2>Code & design.</h2>
@@ -44,7 +43,7 @@ export default function About() {
             Figma, and thinking about both how a system works and how someone
             experiences it.
           </p>
-          <StitchTrim variant="stars" />
+
           <h2>And a little art.</h2>
           <p>
             I also experiment with digital art and watercolors. Visual work is
@@ -56,7 +55,7 @@ export default function About() {
           </SiteLink>
         </div>
       </section>
-      <StitchTrim variant="hearts" className="about-bottom-trim" />
+
     </PortfolioFrame>
   );
 }
