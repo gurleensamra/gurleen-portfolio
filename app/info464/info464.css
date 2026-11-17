@@ -20,3 +20,5 @@
 .vsd-page .vsd-graph-art .graph-swirl-two { width:78%; left:8%; top:95%; transform:scaleX(-1) rotate(4deg); }
 @media(max-width:760px) { .vsd-page .vsd-graph-art .background-stitch { width:180px; opacity:.25; } .vsd-shell { padding-inline:8px; } .vsd-graph-art .graph-bow-one { top:620px; } }
 @media print { .vsd-graph-art { display:none; } }
+
+.vsd-timeline { list-style:none; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:12px; } .vsd-timeline li { margin:0; padding:14px; border-left:2px solid #b780a4; background:#fff9f2; font-size:13px; } .vsd-timeline strong,.vsd-timeline span,.vsd-timeline em { display:block; } .vsd-timeline em { margin-top:8px; color:#944c76; font-size:12px; } @media(max-width:760px) { .vsd-timeline { grid-template-columns:1fr; } } @media print { .vsd-card-exercise .vsd-diagram { break-inside:auto; } .vsd-timeline li { break-inside:avoid; } }
