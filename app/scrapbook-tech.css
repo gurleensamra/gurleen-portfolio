@@ -250,10 +250,16 @@
 .portfolio .section-stitch-divider { width:210px; opacity:1; }
 @media(max-width:740px) { .cover-patch { width:110px!important; top:16px; right:12px; } .portfolio .intro-side-stitch { width:130px; } }
 
-/* Gothic scrollwork sits in the open space around the About copy. */
-.gothic-flourish { display:block; width:100%; height:auto; color:#965477; opacity:.42; pointer-events:none; }
-.night .gothic-flourish { color:#d6a2c8; opacity:.4; }
-.about-flourish-top { margin:0 auto clamp(24px,3vw,48px); max-width:780px; }
-.about-flourish-bottom { margin:clamp(28px,3vw,48px) auto 0; max-width:680px; }
-.footer-flourish { width:min(84%,1000px); margin:0 auto 34px; }
-@media(max-width:740px) { .gothic-flourish { opacity:.5; } .about-flourish-top { margin-bottom:24px; } .about-flourish-bottom { margin-top:28px; } .footer-flourish { width:94%; margin-bottom:24px; } }
+/* Oversized scrollwork lives behind the layout, outside document flow. */
+.portfolio .about-section,.portfolio footer { position:relative; isolation:isolate; }
+.gothic-flourish { display:block; height:auto; color:#965477; pointer-events:none; }
+.portfolio .about-section > .gothic-flourish,.portfolio .footer-flourish { position:absolute; z-index:-1; max-width:none; margin:0; opacity:.16; }
+.portfolio .about-flourish-top { width:95%; left:-4%; top:0; transform:rotate(-7deg); }
+.portfolio .about-flourish-bottom { width:88%; right:-3%; bottom:0; transform:scaleX(-1) rotate(-5deg); }
+.portfolio .footer-flourish { width:100%; left:0; top:50%; transform:translateY(-50%); }
+.portfolio.night .gothic-flourish { color:#d6a2c8; opacity:.14; }
+@media(max-width:740px) {
+  .portfolio .about-flourish-top { width:120%; left:-10%; top:10px; }
+  .portfolio .about-flourish-bottom { width:120%; right:-10%; bottom:15px; }
+  .portfolio .footer-flourish { width:140%; left:-20%; }
+}

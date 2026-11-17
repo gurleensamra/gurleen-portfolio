@@ -394,6 +394,8 @@ export default function Home() {
           </div>
         </article>
         <section id="about" className="about-section">
+          <GothicFlourish variant="sweep" className="about-flourish-top" />
+          <GothicFlourish variant="diamond" className="about-flourish-bottom" />
           <FlowerSticker className="flower-orchid flower-about" />
           <figure className="about-note">
             <Image
@@ -410,7 +412,6 @@ export default function Home() {
             <figcaption className="hand">Gurleen Kaur Samra</figcaption>
           </figure>
           <div className="about-copy">
-            <GothicFlourish variant="sweep" className="about-flourish-top" />
 
             <p className="eyebrow">A LITTLE ABOUT ME</p>
             <h2>
@@ -431,7 +432,6 @@ export default function Home() {
             <SiteLink href="/about" className="text-link">
               A little more about me ↗
             </SiteLink>
-            <GothicFlourish variant="diamond" className="about-flourish-bottom" />
 
           </div>
         </section>
