@@ -1,6 +1,7 @@
 /* Native anchors match the portfolio static-export navigation. */
 /* oxlint-disable next/no-html-link-for-pages */
 import Image from '@/components/site-image';
+import VsdTheme from '@/components/vsd-theme';
 import BackgroundStitch from '@/components/background-stitch';
 import type { Metadata } from 'next';
 import { Fragment } from 'react';
@@ -67,17 +68,17 @@ function CaseStudy({text,kind}:{text:string;kind:'dj'|'web'}){
  <div className="vsd-case-body">{sections.map((section,i)=><section className="vsd-section" key={i}>{prose(section)}
  {i===0 && kind==='web' && <p className="vsd-live-site">Live website: <a href="https://gurleenksamra.com" target="_blank" rel="noreferrer">gurleenksamra.com ↗</a></p>}
  {i===0 && (kind==='dj'?<figure className="vsd-zine"><a href="/info464-assets/ai-dj-zine.png"><Image unoptimized src="/info464-assets/ai-dj-zine.png" width="1080" height="1350" alt="Original Spotify AI DJ zine: artist and album collage surrounding the AI DJ symbol, with music player controls."/></a><figcaption>Original AI DJ zine · select to view full size</figcaption></figure>:<Screenshot file="portfolio-home" caption="Actual portfolio homepage: personal typography and desktop windows express identity; recognizable navigation supports clarity."/>)}
- {kind==='web' && section.startsWith('### My Design') && <Screenshot file="portfolio-about" caption="Actual About section: cross-stitched background details and a personal photo support self-expression while the text and link remain clearly separated."/>}
+ {kind==='web' && section.startsWith('### My Design') && <><Screenshot file="portfolio-work" caption="Recruiter scenario annotation: Selected Work and explicit project links provide a route to technical experience."/><Screenshot file="portfolio-about" caption="Actual About section: cross-stitched background details and a personal photo support self-expression while the text and link remain clearly separated."/></>}
  {section.startsWith('### Stakeholders') && <Stakeholders kind={kind}/>}
  {section.startsWith('### Tripartite') && <Tripartite kind={kind}/>}
- {section.startsWith('### Value Sensitive') && <><Scenarios kind={kind}/>{kind==='dj'?<Envisioning/>:<><div className="vsd-diagram"><h4>03 / Value-oriented design analysis</h4><div className="vsd-values">{[['Scrapbook visual language','Self-expression'],['Project navigation','Efficiency'],['Skip link & focus indicators','Accessibility'],['Day / night preference','User control'],['Unlisted course page','Autonomy & selective visibility']].map(([feature,value])=><div key={feature}><span>{feature}</span><b>→</b><strong>{value}</strong></div>)}</div></div><Screenshot file="portfolio-keyboard" caption="Navigating without a mouse: pressing Tab reveals “Skip to projects.” Pressing Enter jumps to the work, so visitors do not have to move through every navigation link. This shows one interaction; it is not a full accessibility audit."/><Screenshot file="portfolio-work" caption="Recruiter scenario annotation: Selected Work and explicit project links provide a route to technical experience."/></>}</>}
+ {section.startsWith('### Value Sensitive') && <><Scenarios kind={kind}/>{kind==='dj'?<Envisioning/>:<><div className="vsd-diagram"><h4>03 / Value-oriented design analysis</h4><div className="vsd-values">{[['Scrapbook visual language','Self-expression'],['Project navigation','Efficiency'],['Skip link & focus indicators','Accessibility'],['Day / night preference','User control'],['Unlisted course page','Autonomy & selective visibility']].map(([feature,value])=><div key={feature}><span>{feature}</span><b>→</b><strong>{value}</strong></div>)}</div></div></>}</>}
  </section>)}</div></article>
 }
 export default function Info464(){
  const [intro,rest]=source.split('# 01. Beyond the Algorithm');
  const [dj,remaining]=rest.split('# 02. Designing My Digital Identity');
  const [web,reflection]=remaining.split('# Final Reflection');
- return <main className="vsd-page">
+ return <VsdTheme>
  <div className="vsd-graph-art" aria-hidden="true">
   <BackgroundStitch motif="bow" className="graph-bow-one" />
   <BackgroundStitch motif="note" className="graph-note-one" />
@@ -93,5 +94,5 @@ export default function Info464(){
  <div className="vsd-interlude"><span>CONNECTION</span><span aria-hidden="true">↔</span><span>CONTROL</span><p>Different artifacts. A shared question: whose values does a design make room for?</p></div>
  <CaseStudy text={'# 02. Designing My Digital Identity'+web} kind="web"/>
  <section id="reflection" className="vsd-reflection">{prose('# Final Reflection'+reflection)}</section>
- <footer className="vsd-footer"><span>GKS / INFO 464 / DESIGNED AROUND PEOPLE</span></footer></div></main>;
+ <footer className="vsd-footer"><span>GKS / INFO 464 / DESIGNED AROUND PEOPLE</span></footer></div></VsdTheme>;
 }

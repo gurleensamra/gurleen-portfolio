@@ -22,3 +22,38 @@
 @media print { .vsd-graph-art { display:none; } }
 
 .vsd-timeline { list-style:none; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:12px; } .vsd-timeline li { margin:0; padding:14px; border-left:2px solid #b780a4; background:#fff9f2; font-size:13px; } .vsd-timeline strong,.vsd-timeline span,.vsd-timeline em { display:block; } .vsd-timeline em { margin-top:8px; color:#944c76; font-size:12px; } @media(max-width:760px) { .vsd-timeline { grid-template-columns:1fr; } } @media print { .vsd-card-exercise .vsd-diagram { break-inside:auto; } .vsd-timeline li { break-inside:avoid; } }
+
+/* Shared day/night preference, soft desktop glows, and tactile links. */
+.vsd-theme-toolbar { position:relative; z-index:2; max-width:1120px; margin:0 auto 18px; display:flex; justify-content:flex-end; }
+.vsd-theme-toggle { display:flex; align-items:center; gap:12px; padding:10px 16px; background:var(--v-paper); color:var(--v-ink); border:1px solid var(--v-line); border-radius:24px; font:13px monospace; cursor:pointer; }
+.vsd-theme-toggle:focus-visible { outline:3px solid #b34e95; outline-offset:4px; }
+.vsd-toggle-track { width:30px; height:18px; border-radius:20px; background:#deb3d2; padding:3px; }
+.vsd-toggle-track i { display:block; width:12px; height:12px; background:#553448; border-radius:50%; transition:transform .2s; }
+.vsd-night .vsd-toggle-track i { transform:translateX(12px); }
+.vsd-page .vsd-note { background:#e8ddf4; border-left-color:#ad85bd; }
+.vsd-page .vsd-hero nav a { transition:transform .2s,box-shadow .2s,background-color .2s; box-shadow:2px 3px 0 #c99ab5; }
+.vsd-page .vsd-hero nav a:hover,.vsd-page .vsd-hero nav a:focus-visible { transform:translateY(-3px) rotate(-1deg); background:#efc6e0; box-shadow:3px 6px 0 #b77da3,0 0 20px #e578bb44; }
+.vsd-page .vsd-hero,.vsd-page .vsd-case,.vsd-page .vsd-reflection { box-shadow:5px 7px 0 #cba7c033,0 0 28px #c47bb318; }
+.vsd-page .vsd-diagram { transition:box-shadow .25s; }
+.vsd-page .vsd-diagram:hover { box-shadow:0 0 20px #c47bb326; }
+.vsd-page.vsd-night { --v-ink:#f7eaf4; --v-paper:#30212f; --v-pink:#633e5a; --v-line:#986888; --v-lilac:#48324e; background-color:#241923; background-image:linear-gradient(#e98dbc12 1px,transparent 1px),linear-gradient(90deg,#e98dbc12 1px,transparent 1px); }
+.vsd-night .vsd-hero nav a { background:#503247; box-shadow:2px 3px 0 #8e5b80; }
+.vsd-night .vsd-hero nav a:hover,.vsd-night .vsd-hero nav a:focus-visible { background:#6a3d5c; box-shadow:3px 6px 0 #8e5b80,0 0 24px #e891cb45; }
+.vsd-night h1 em,.vsd-night .vsd-section:first-child>h2:first-child { color:#e2a6ca; }
+.vsd-night .vsd-note,.vsd-night .vsd-reflection { background:#42304e; }
+.vsd-night .vsd-diagram { background:#3a2a40; border-color:#8c6385; }
+.vsd-night .vsd-nodes>div,.vsd-night .vsd-three>div,.vsd-night .vsd-scenarios>div,.vsd-night .vsd-timeline li { background:#30212f; }
+.vsd-night .vsd-scenarios strong,.vsd-night .vsd-timeline em { color:#e2a6ca; }
+.vsd-night .vsd-shot { background:#352532; border-color:#8c6385; }
+.vsd-night .vsd-zine { background:#503247; }
+.vsd-night .background-stitch { color:#e0b1d3; }
+.vsd-night .vsd-hero,.vsd-night .vsd-case,.vsd-night .vsd-reflection { box-shadow:5px 7px 0 #100a1433,0 0 30px #e891cb16; }
+@media(prefers-reduced-motion:reduce) { .vsd-page .vsd-hero nav a,.vsd-page .vsd-diagram,.vsd-toggle-track i { transition:none; } .vsd-page .vsd-hero nav a:hover,.vsd-page .vsd-hero nav a:focus-visible { transform:none; } }
+@media print {
+ .vsd-theme-toolbar { display:none; }
+ .vsd-page.vsd-night { --v-ink:#211c21; --v-paper:#fffaf2; --v-line:#ac829d; --v-lilac:#e6ddf0; color:#211c21; }
+ .vsd-night .vsd-note,.vsd-night .vsd-reflection,.vsd-night .vsd-diagram { background:#eee5f2; }
+ .vsd-night .vsd-nodes>div,.vsd-night .vsd-three>div,.vsd-night .vsd-scenarios>div,.vsd-night .vsd-timeline li,.vsd-night .vsd-shot { background:#fffaf2; }
+ .vsd-night h1 em,.vsd-night .vsd-scenarios strong,.vsd-night .vsd-timeline em { color:#944c76; }
+ .vsd-page .vsd-hero,.vsd-page .vsd-case,.vsd-page .vsd-reflection { box-shadow:none; }
+}
