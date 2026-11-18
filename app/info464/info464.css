@@ -57,3 +57,22 @@
  .vsd-night h1 em,.vsd-night .vsd-scenarios strong,.vsd-night .vsd-timeline em { color:#944c76; }
  .vsd-page .vsd-hero,.vsd-page .vsd-case,.vsd-page .vsd-reflection { box-shadow:none; }
 }
+
+/* Desktop title bars share the main portfolio's soft illuminated treatment. */
+.vsd-page .vsd-windowbar {
+  position:relative;
+  box-shadow:inset 0 0 20px #efb5db20,0 0 14px #cf7db52b;
+  transition:box-shadow .25s ease,background-color .25s ease;
+}
+.vsd-page .vsd-windowbar:hover {
+  background:#59354e;
+  box-shadow:inset 0 0 26px #f2b9dd3b,0 0 25px #e18ac155;
+}
+.vsd-page .vsd-windowbar > span {
+  text-shadow:0 0 8px #f4b9df88;
+}
+.vsd-night .vsd-windowbar {
+  box-shadow:inset 0 0 22px #efb5db29,0 0 18px #e18ac138;
+}
+@media(prefers-reduced-motion:reduce) { .vsd-page .vsd-windowbar { transition:none; } }
+@media print { .vsd-page .vsd-windowbar { box-shadow:none; } .vsd-page .vsd-windowbar > span { text-shadow:none; } }
